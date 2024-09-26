@@ -1,0 +1,58 @@
+---
+title: 'Layout'
+description: 'This is main layout for the site.'
+
+// Component Imports
+import '../styles/global.css'
+import { ViewTransitions } from 'astro:transitions'
+import '../styles/global.css'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+
+interface Props {
+	title?: string
+	description?: string
+	image?: string
+	data?: {}
+
+	robots?: boolean
+}
+
+const {
+	title = 'Jolita Budriene photography',
+	description = "Jolita's portfolio",
+	image,
+	data,
+	robots
+} = Astro.props as Props
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/JolitaPhotographyWeb/favicon.svg" /> 
+
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<meta name="description" content={description} />
+		<title>{title}</title>
+		<ViewTransitions />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Bona+Nova&family=Montserrat&family=Permanent+Marker&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="bg-darkGray font-sans text-veryLightGray">
+		<Nav />
+		<main>
+			<!-- Slot element where the main content of the page will be inserted -->
+			<slot>Default Text</slot>
+		</main>
+		<Footer />
+	</body>
+</html>

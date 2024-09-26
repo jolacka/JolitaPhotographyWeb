@@ -1,0 +1,98 @@
+[
+  {
+    "name": "John Doe",
+    "body": "Jolita is highly skilled and creative. Our wedding photos are breathtaking!",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Connor",
+    "body": "What a fantastic experience! She made us feel so comfortable during the shoot.",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image1.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Jane Smith",
+    "body": "Amazing experience, highly recommend. Jolita captured our family perfectly!",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image2.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Mindaugas",
+    "body": "We are absolutely thrilled with the photographs of our newborn daughter. Truly a professional!",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image3.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Bruce Wayne",
+    "body": "The photos turned out great! Can't wait to book another session.",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image4.jpg",
+    "rating": 4
+  },
+  {
+    "name": "Eiva $ Vilte",
+    "body": "Jolita has an incredible eye for detail! Our photos turned out stunning.",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image5.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Clark Kent",
+    "body": "Jolita is punctual and professional. She made our day so special.",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image6.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Lois Lane",
+    "body": "Her ability to capture emotions is unmatched. Every shot tells a story.",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image7.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Peter Parker",
+    "body": "A great experience from start to finish. Highly recommend her services!",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image8.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Natasha Romanoff",
+    "body": "Jolita captured our family moments beautifully. We're so grateful!",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image9.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Tony Stark",
+    "body": "Her creativity and passion shine through every photograph. Simply amazing!",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image10.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Wanda Maximoff",
+    "body": "A delightful experience! Her attention to detail is incredible.",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image11.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Stephen Strange",
+    "body": "The final products were beautiful. We will treasure them forever.",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image12.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Gamora",
+    "body": "Jolita is a joy to work with. She captures magic in every shot!",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image13.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Rocket Raccoon",
+    "body": "Fantastic experience! I can't recommend her enough!",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image14.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Peter Quill",
+    "body": "Best photographer around! She knows how to bring out the best in her subjects.",
+    "headshot": "/JolitaPhotographyWeb/img/reviews/image15.jpg",
+    "rating": 5
+  }
+]

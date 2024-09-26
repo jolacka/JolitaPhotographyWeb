@@ -1,0 +1,23 @@
+---
+interface Props {
+	href?: string;
+	text: string;
+	desc?: string;
+	isSubmit: boolean;
+}
+const {
+	href,
+	text,
+	desc,
+	isSubmit = false
+} = Astro.props as Props;
+---
+{isSubmit ?
+	<button type="submit" class="btn" aria-label={desc || 'Send a message'}>
+		{text}
+	</button>
+:
+	<a href={href} class="btn" aria-label={desc || text}>
+		{text}
+	</a>
+}

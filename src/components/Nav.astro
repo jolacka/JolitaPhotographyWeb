@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from 'astro-icon';
+import contactData from "../data/contactData";
+---
+
+<nav style="background-color: #110310";>
+<nav class="relative lg:container mx-auto p-6">
+	<!-- Flex container -->
+	<div class="flex items-center justify-between">
+		<!-- Logo -->
+		<a href="/JolitaPhotographyWeb/" class="flex justify-center">
+			<Image src="/JolitaPhotographyWeb/Jolita_logo_W.svg" alt="Logo" width={200} height={80} />
+		</a>
+		<!-- Menu Items -->
+		<ul class="hidden md:flex space-x-3 lg:space-x-10 pl-2">
+			<li><a href="/#about" aria-label="Read about me" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">ABOUT ME</a></li>
+			<li><a href="/#formats-photoshoots" aria-label="Know more about different photoshoot formats" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">GALLERY</a></li>
+			<li><a href="/#reviews" aria-label="Review" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">FEEDBACK</a></li>
+			<li><a href="/#contacts" aria-label="How to contact with me" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">CONTACT ME</a></li>
+			<li><a href="/#book-meeting" aria-label="Make a booking" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">MAKE A BOOKING</a></li>
+		</ul>
+		<!-- Phone number -->
+		<a href=`tel:${contactData.phoneValue}` class="hidden md:flex p-3 pr-0 items-start gap-1">
+			<Icon name="ri:phone-fill" width="18px" class="pt-[3px]" />
+			<span>{contactData.phoneText}</span>
+		</a>
+
+		<!-- Hamburger Icon -->
+		<button id="menu-btn" class="block hamburger focus:outline-none md:hidden" aria-label="Open Navigation Menu">
+			<span class="hamburger-top"></span>
+			<span class="hamburger-middle"></span>
+			<span class="hamburger-bottom"></span>
+		</button>
+
+		<!-- Mobile Menu -->
+		<div id="slideover-container" class="fixed inset-0 w-full h-full invisible z-10">
+			<div id="slideover-bg"class="absolute inset-0 w-full h-full bg-gray-900 opacity-0 z-0 duration-500 ease-out transition-all"></div>
+			<ul id="slideover"class="absolute w-56 h-full flex-col items-left self-end px-10 pt-20 space-y-10 bg-navGray top-0 right-0 translate-x-full duration-500 ease-out transition-all">
+				<li><a href="#about" aria-label="Read about me as photograph" class="nav-link hover:text-brightRed">About me</a></li>
+				<li><a href="#formats-photoshoots" aria-label="Gallery" class="nav-link hover:text-brightRed">Gallery</a></li>
+				<li><a href="#reviews" aria-label="Reviews and  feedback" class="nav-link hover:text-brightRed">Review</a></li>
+				<li><a href="#contacts" aria-label="How to contact with photograph" class="nav-link hover:text-brightRed">Contacts</a></li>
+				<li><a href="/#book-meeting" aria-label="Make a booking" class="pb-2 border-b-2 border-darkGray hover:border-veryLightGray duration-500 ease-out transition-all">MAKE A BOOKING</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script>
+	import "../js/nav.js"
+</script>

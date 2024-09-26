@@ -1,0 +1,406 @@
+---
+import { Image } from 'astro:assets' // Astro component for handling image imports and optimizing image formats
+import { Icon } from 'astro-icon' // Astro component for rendering icons from various icon packs
+
+import Layout from '../layouts/Layout.astro' // Layout component for page structure
+import Button from '../components/Button.astro' // Button component
+import TabPhoto from '../components/TabPhoto.astro' // Component for rendering tabbed photo galleries
+import contactData from '../data/contactData' // Data file containing contact information
+
+// Import images to be used across the website
+import heroImage from '../assets/Jolita.jpg'
+import aboutImage from '../assets/about.jpg'
+
+// Various categories of photoshoots
+import portrait_0Image from '../assets/formats/portrait/0.jpg'
+import portrait_1Image from '../assets/formats/portrait/1.jpg'
+import portrait_2Image from '../assets/formats/portrait/2.jpg'
+import portrait_3Image from '../assets/formats/portrait/3.jpg'
+import portrait_4Image from '../assets/formats/portrait/4.jpg'
+import family_0Image from '../assets/formats/family/0.jpg'
+import family_1Image from '../assets/formats/family/1.jpg'
+import family_2Image from '../assets/formats/family/2.jpg'
+import family_3Image from '../assets/formats/family/3.jpg'
+import family_4Image from '../assets/formats/family/4.jpg'
+import moments_0Image from '../assets/formats/moments/0.jpg'
+import moments_1Image from '../assets/formats/moments/1.jpg'
+import moments_2Image from '../assets/formats/moments/2.jpg'
+import moments_3Image from '../assets/formats/moments/3.jpg'
+import moments_4Image from '../assets/formats/moments/4.jpg'
+import child_0Image from '../assets/formats/child/0.jpg'
+import child_1Image from '../assets/formats/child/1.jpg'
+import child_2Image from '../assets/formats/child/2.jpg'
+import child_3Image from '../assets/formats/child/3.jpg'
+import child_4Image from '../assets/formats/child/4.jpg'
+---
+
+<Layout title="Jolita's PHOTOGRAPHY">
+	<!-- Hero Section A SIMPLE DOM STRUCTURE -->
+	<section id="hero">
+		<!-- Flex Container -->
+		<div
+			class="container mx-auto mt-5 flex flex-col items-start space-y-12 px-6 md:mt-10 md:flex-row md:items-center md:space-y-0"
+		>
+			<!-- Left item -->
+			<div class="flex flex-col space-y-12 md:w-1/2">
+				<p class="max-w-sm" style="font-size: 2rem;">Photograper, teacher & developer</p>
+				<div class="animate-hide flex md:justify-end">
+					<h1
+						class="whitespace-nowrap pr-2 font-serif text-4xl text-brightRed md:text-5xl lg:text-6xl"
+					>
+						Hello and Welcome!
+					</h1>
+				</div>
+				<div class="justify flex">
+					<p class="md:max-w-xs">
+						My name is Jolita.<br />
+						 Photography is my hobby, my joy and my life.<br />
+						 Photography is part of me.<br />
+						 Welcome to my site. <br />
+					</p>
+				</div>
+				<div class="flex justify-center md:justify-start">
+					<Button
+						href="#contacts"
+						text="Contact ME"
+						desc="Book an appoinment for your photoshoot"
+					/>
+				</div>
+			</div>
+			<!-- Image -->
+			<div class="md:w-1/2">
+				<Image src={heroImage} alt="Jolita main photo" format="avif" />
+			</div>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section id="about" data-anchor="about">
+		<div
+			class="container mx-auto mt-20 flex flex-col items-start space-y-12 px-6 md:flex-row md:items-center md:space-y-0"
+		>
+			<!-- Left item -->
+			<div class="flex flex-col space-y-6 pr-2 md:w-1/2 md:space-y-12">
+				<h2
+					class="animate-hide whitespace-nowrap font-serif text-4xl text-brightRed md:pr-2 md:text-5xl lg:text-6xl"
+				>
+					ABOUT ME
+				</h2>
+				<div class="flex flex-col space-y-6">
+					<p>
+						I am an enthusiastic photographer, originally from Lithuania, but for the past 15 years,
+						I’ve been living in Ireland, which I now proudly call home. Photography has been my
+						passion, my joy, and my escape for a very long time. It brings me to happiness.
+					</p>
+					<p>
+						My home is in the heart of Ireland, in the town of Kildare, County Kildare. I like to
+						capture all moments. I love what I do—it’s a part of my life. I’m excited to share my
+						work with you and would be happy to capture memories of you and your loved ones.
+					</p>
+					<p>
+						I am passionate about photography and continually strive to improve my craft. Capturing
+						moments and being creative brings me great joy. I’m always learning, growing, and
+						challenging myself, and I find it incredibly fun.
+					</p>
+					<p>
+						If you’re looking for a photographer to capture your precious memories—whether it’s a
+						new addition to your family, your growing family, special moments with grandparents, or
+						your wedding day—I’d love to chat with you. Stay a while, explore my work, and let’s
+						connect!
+					</p>
+					<p>Welcome to my website.</p>
+					<p>With love, Jolita ❤</p>
+				</div>
+				<!-- Contact Button to book appointments -->
+				<div class="flex justify-center md:justify-start">
+					<Button
+						href="#contacts"
+						text="Contact ME"
+						desc="Book an appoinment for your photoshoot"
+					/>
+				</div>
+			</div>
+			<!-- About Section Right Side (About Image) -->
+			<div class="overflow-hidden md:w-1/2 lg:h-[46rem]">
+				<Image
+					src={aboutImage}
+					alt="jolita picture"
+					format="avif"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- Photoshoots Section with Tabs for different categories -->
+	<section id="formats-photoshoots" data-anchor="formats-photoshoots">
+		<div
+			class="container mx-auto mt-20 flex flex-col space-y-6 px-6 md:mt-20 md:space-y-12 lg:mt-40"
+		>
+			<h2
+				class="animate-hide flex flex-col whitespace-nowrap pr-2 font-serif text-4xl text-brightRed md:text-5xl lg:text-6xl"
+			>
+				GALLERRY
+			</h2>
+			<!-- Tab Navigation for selecting different types of photoshoots -->
+			<div
+				role="tablist"
+				aria-label="Tabs Photoshoot Formats"
+				class="col-auto mx-auto grid w-max grid-cols-2 items-center gap-y-3 overflow-hidden px-[3px] transition md:grid-cols-4"
+			>
+				<!-- Button to switch to "Portraits" gallery tab -->
+				<button
+					role="tab"
+					aria-selected="true"
+					aria-controls="panel-portrait"
+					id="tab-portrait"
+					tabindex="0"
+					class="tab h-10 border-b border-brightRed px-6 text-brightRed"
+				>
+					Portraits
+				</button>
+				<!-- Button to switch to "Family" gallery tab -->
+				<button
+					role="tab"
+					aria-selected="false"
+					aria-controls="panel-family"
+					id="tab-family"
+					tabindex="-1"
+					class="tab h-10 border-b border-veryLightGray px-6"
+				>
+					Family
+				</button>
+				<!-- Button to switch to "Moments" gallery tab -->
+				<button
+					role="tab"
+					aria-selected="false"
+					aria-controls="panel-moments"
+					id="tab-moments"
+					tabindex="-1"
+					class="tab h-10 border-b border-veryLightGray px-6"
+				>
+					Moments
+				</button>
+				<!-- Button to switch to "Kids" gallery tab -->
+				<button
+					role="tab"
+					aria-selected="false"
+					aria-controls="panel-child"
+					id="tab-child"
+					tabindex="-1"
+					class="tab h-10 border-b border-veryLightGray px-6"
+				>
+					Kids
+				</button>
+			</div>
+			<!-- TabPanel for Portraits gallery -->
+			<div class="relative mt-6">
+				<TabPhoto
+					id="panel-portrait"
+					href="/portrait-portfolio"
+					active={true}
+					image0={portrait_0Image}
+					image1={portrait_1Image}
+					image2={portrait_2Image}
+					image3={portrait_3Image}
+					image4={portrait_4Image}
+				/>
+				<!-- TabPanel for Family gallery -->
+				<TabPhoto
+					id="panel-family"
+					href="/family-portfolio"
+					image0={family_0Image}
+					image1={family_1Image}
+					image2={family_2Image}
+					image3={family_3Image}
+					image4={family_4Image}
+				/>
+				<!-- TabPanel for Moments gallery -->
+				<TabPhoto
+					id="panel-moments"
+					imageFolder="formats/moments"
+					href="/moments-portfolio"
+					image0={moments_0Image}
+					image1={moments_1Image}
+					image2={moments_2Image}
+					image3={moments_3Image}
+					image4={moments_4Image}
+				/>
+				<!-- TabPanel for Kids gallery -->
+				<TabPhoto
+					id="panel-child"
+					imageFolder="formats/child"
+					href="child-portfolio"
+					image0={child_0Image}
+					image1={child_1Image}
+					image2={child_2Image}
+					image3={child_3Image}
+					image4={child_4Image}
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- Reviews Section -->
+	<section id="reviews" data-anchor="reviews">
+		<div class="container relative mx-auto mt-20 flex flex-col space-y-6 px-6 md:space-y-12">
+			<h2
+				class="animate-hide whitespace-nowrap font-serif text-4xl text-brightRed md:pr-2 md:text-5xl lg:text-6xl"
+			>
+				Feedback
+			</h2>
+
+			<div class="mt-10 flex space-x-2 overflow-hidden">
+				<div class="reviews flex"></div>
+				<button
+					id="reviews-arrow-right"
+					aria-label="Review Arrow Right"
+					class="arrow absolute -right-3 top-[calc(50%+2rem)] w-[35px] rounded-full bg-darkGray transition-all duration-300 ease-out hover:-right-4 hover:text-brightRed focus:text-brightRed"
+				>
+					<Icon name="lucide:arrow-right" width="36px" class="" />
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section-->
+	<section id="contacts" data-anchor="contacts">
+		<div class="container relative mx-auto mt-20 flex flex-col px-6">
+			<h2
+				class="animate-hide whitespace-nowrap font-serif text-4xl text-brightRed md:pr-2 md:text-5xl lg:text-6xl"
+			>
+				Get in Touch
+			</h2>
+			<div
+				class="mt-0 flex flex-col items-start items-center space-x-0 md:mt-10 md:flex-row selection:md:space-x-6"
+			>
+				<!-- Left side with contact details -->
+				<div class="my-10 flex w-full flex-col gap-y-6 md:mt-0 md:w-1/2 md:min-w-[280px]">
+					<!-- Contact information -->
+					<div class="mt-3 flex flex-col gap-y-1">
+						<a href={`tel:${contactData.phoneValue}`} class="text-xl" aria-label="Call me">
+							<span>{contactData.phoneText}</span>
+						</a>
+						<a href={`email:${contactData.email}`} class="text-xl" aria-label="Email me">
+							<span>{contactData.email}</span>
+						</a>
+					</div>
+					<!-- Location details -->
+					<div class="flex flex-col gap-y-1">
+						<span>IRELAND</span>
+						<span>KILDARE</span>
+					</div>
+					<!-- Social Media Links -->
+					<div class="flex gap-x-4">
+						<a
+							href={`{contactData.facebook}`}
+							aria-label="Contact me on Facebook"
+							target="_blank"
+							class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightRed"
+						>
+							<Icon name="ri:facebook-fill" width="36px" class="text-black" />
+						</a>
+						<a
+							href={`{contactData.instagram}`}
+							aria-label="Contact me on Instagram"
+							target="_blank"
+							class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightRed"
+						>
+							<Icon name="ri:instagram-line" width="32px" class="text-black" />
+						</a>
+						<a
+							href={`{contactData.linkedin}`}
+							aria-label="Contact me on LinkedIn"
+							target="_blank"
+							class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightRed"
+						>
+							<Icon name="ri:linkedin-fill" width="32px" class="text-black" />
+						</a>
+						<a
+							href={`tel:${contactData.phoneValue}`}
+							aria-label="Call me"
+							class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightRed"
+						>
+							<Icon name="ri:phone-fill" width="28px" class="text-black" />
+						</a>
+					</div>
+				</div>
+
+				<!-- Right side  contact form for only messsages-->
+				<form
+					name="contact"
+					id="form"
+					method="POST"
+					data-netlify="true"
+					class="flex w-full flex-col md:w-1/2"
+				>
+					<input
+						class="w-full appearance-none border-b border-veryLightGray bg-darkGray py-5 leading-tight focus:outline-none"
+						id="name"
+						name="name"
+						type="text"
+						placeholder="Your name"
+						required
+					/>
+					<input
+						class="w-full appearance-none border-b border-veryLightGray bg-darkGray py-5 leading-tight focus:outline-none"
+						id="email"
+						name="email"
+						type="email"
+						placeholder="Your email"
+						required
+					/>
+					<input
+						class="w-full appearance-none border-b border-veryLightGray bg-darkGray py-5 leading-tight focus:outline-none"
+						id="phone"
+						name="phone"
+						type="text"
+						placeholder="Your phone number"
+						required
+					/>
+					<textarea
+						id="message"
+						name="message"
+						rows="3"
+						class="w-full border-b border-veryLightGray bg-darkGray py-5 focus:outline-none"
+						placeholder="Your message"
+						required></textarea>
+					<!-- Submit button -->
+					<div class="mt-8 flex justify-center md:justify-start">
+						<button type="submit" aria-label="Send Form" class="btn px-14"> Send Message</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Calendly Widget Section -->
+	<section id="book-meeting" class="mt-20">
+		<div class="container relative mx-auto mt-20 flex flex-col px-6">
+			<h2
+				class="animate-hide whitespace-nowrap font-serif text-4xl text-brightRed md:pr-2 md:text-5xl lg:text-6xl"
+			>
+				MAKE A BOOKING
+			</h2>
+			<!-- Calendly inline widget begin -->
+			<div
+				class="calendly-inline-widget"
+				data-url="https://calendly.com/paskeviciute/30min?background_color=ded8d8&primary_color=6d0e70"
+				style="min-width:320px;height:700px;"
+			>
+			</div>
+			<!-- Calendly JS to enable the widget -->
+			<script
+				type="text/javascript"
+				src="https://assets.calendly.com/assets/external/widget.js"
+				async></script>
+			<!-- Calendly inline widget end -->
+		</div>
+	</section>
+	<script>
+		// Importing JS files for various functionality such as animations, tabs, reviews
+		import '../js/animation.js'
+		import '../js/tabs.js'
+		import '../js/reviews.js'
+	</script>
+</Layout>
