@@ -2,18 +2,18 @@
 title: "Footer";
 
 import { Image } from "astro:assets";
+import jolitaLogo from '../assets/jolita_logo.png';
 import contactData from "../data/contactData";
 const currentYear = new Date().getFullYear();
 ---
 
-<footer style="background-color: #110310;" class="text-center py-4 mt-auto">
 <div class="container flex flex-col md:flex-row items-start px-6 mx-auto mt-20 mb-10 justify-between text-sm gap-4">
 	<div class="flex flex-row gap-4 sm:gap-12 md:gap-20 lg:gap-32">
 		<div class="flex flex-col gap-y-3">
 			<h6 class="text-base font-semibold">JOLITA BUDRIENE { currentYear }</h6>
 			<ul class="flex flex-col gap-y-2">
 				<li>&copy; All rights reserved</li>
-				<li>Thank you</li>
+				<li>Thank you <Image src={jolitaLogo} alt="Jolita Logo" width={30} height={30} class="inline-block ml-2" /></li>
 			</ul>
 		</div>
 		<div class="flex flex-col gap-y-3">
@@ -27,7 +27,6 @@ const currentYear = new Date().getFullYear();
 	</div>
 	<div class="flex flex-row gap-10 md:gap-10 lg:gap-32">
 		<div class="flex flex-col gap-y-3" >
-			<h6 class="text-base font-semibold">Find me:</h6>
 			<ul class="flex flex-col gap-y-2">
 				<li><a href=`${contactData.instagram}` target="_blank" aria-label="Open my page Instagram">INSTAGRAM</a></li>
 				<li><a href=`${contactData.facebook}` target="_blank" aria-label="Open my page Facebook">FACEBOOK</a></li>
@@ -37,7 +36,6 @@ const currentYear = new Date().getFullYear();
 		</div>
 
 		<div class="flex flex-col gap-y-3" >
-			<h6 class="text-base font-semibold">Reach me</h6>
 			<ul class="flex flex-col gap-y-2">
 				<li><a href=`tel:${contactData.phoneValue}` aria-label="Call me">{contactData.phoneText}</a></li>
 				<li><a href=`email:${contactData.email}` aria-label="Email me">{contactData.email}</a></li>
@@ -49,4 +47,3 @@ const currentYear = new Date().getFullYear();
 		</a>
 	</div>
 </div>
-</footer>
