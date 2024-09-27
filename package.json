@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "astro-icon": "^0.8.1",
-    "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.12.0",

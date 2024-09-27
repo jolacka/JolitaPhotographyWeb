@@ -37,7 +37,7 @@ body {
 	top: 24px;  /* Position from the top of the screen */
 	right: 26px;  /* Position from the right of the screen */
 	z-index: 30;  /* Set a high stacking order to keep it on top */
-	background-color: var(--darkGray);  /* Background color */
+	background-color: var(--navGray);  /* Background color */
 	border-radius: 50%;  /* Makes the button round by applying 50% border radius */
 }
 

@@ -31,6 +31,7 @@ const {
 	class={active ? "tab-panel transition duration-300" : "absolute top-0 invisible opacity-0 tab-panel transition duration-300"}
 >
 	<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+		 <!-- Image Grid -->
 		<div class="h-[20rem] md:h-[29rem] lg:h-[33rem] xl:h-[45rem] col-span-2 row-span-2 overflow-hidden">
 			<!--img src={image0} alt="photo sample" class="object-cover w-full h-full"-->
 			<Image src={image0} alt="photo sample" format="avif" class="object-cover w-full h-full" />
@@ -53,9 +54,10 @@ const {
 		</div>
 	</div>
 	<div class="flex justify-center items-center my-5">
-		<a href={href} class="btn" aria-label="Open page with details about this photoshoot format">
-			TAKE A LOKE MORE
-		</a>
+		<a href={`./${href}`} class="btn" aria-label="Open page with details about this photoshoot format">
+			TAKE A LOOK MORE
+		  </a>
+		  
 	</div>
 </div>
 

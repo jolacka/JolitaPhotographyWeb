@@ -1,6 +1,4 @@
 ---
-title: "Footer";
-
 import { Image } from "astro:assets";
 import jolitaLogo from '../assets/jolita_logo.png';
 import contactData from "../data/contactData";
@@ -18,10 +16,10 @@ const currentYear = new Date().getFullYear();
 		</div>
 		<div class="flex flex-col gap-y-3">
 			<ul class="flex flex-col gap-y-2">
-				<li><a href="#about" aria-label="Read more about photograph">ABOUT ME</a></li>
-				<li><a href="#formats-photoshoots" aria-label="Know more about different formats of photoshoots">GALLERY</a></li>
-				<li><a href="#reviews" aria-label="See reviews from clients">FEEDBACK</a></li>
-				<li><a href="#contacts" aria-label="How to contact with photograph">CONTACTS</a></li>
+				<li><a href="/JolitaPhotographyWeb/#about" aria-label="Read more about photograph">ABOUT ME</a></li>
+				<li><a href="/JolitaPhotographyWeb/#formats-photoshoots" aria-label="Know more about different formats of photoshoots">GALLERY</a></li>
+				<li><a href="/JolitaPhotographyWeb/#reviews" aria-label="See reviews from clients">FEEDBACK</a></li>
+				<li><a href="/JolitaPhotographyWeb/#contacts" aria-label="How to contact with photograph">CONTACTS</a></li>
 			</ul>
 		</div>
 	</div>
@@ -43,7 +41,7 @@ const currentYear = new Date().getFullYear();
 		</div>
 		<!-- Footer Logo -->
 		<a href="/JolitaPhotographyWeb/" class="flex flex-col gap-10 md:gap-10 lg:gap-32">
-		<Image src="/JolitaPhotographyWeb/Jolita_logo_W.svg" alt="Logo" width={400} height={100} />
+		<Image src="/JolitaPhotographyWeb/Jolita_logo_W.svg" alt="Logo" width={300} height={100} />
 		</a>
 	</div>
 </div>
