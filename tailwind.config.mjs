@@ -17,7 +17,7 @@ module.exports = {
         brightRed: "var(--brightRed)",
         darkGray: "var(--darkGray)",
         veryLightGray: "var(--veryLightGray)",
-        navGray: "var(--navGray)",
+        navGray: "var(--navPurple)",
       },
     },
   },

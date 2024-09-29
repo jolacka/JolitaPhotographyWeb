@@ -1,63 +1,60 @@
 ---
-import { Image } from "astro:assets";
-import Button from './Button.astro';
+import { Image } from 'astro:assets'
+import Button from './Button.astro'
 
 interface Props {
-	id: string;
-	href: string;
-	active?: boolean;
-	image0: Object;
-	image1: Object;
-	image2: Object;
-	image3: Object;
-	image4: Object;
+	id: string
+	href: string
+	active?: boolean
+	image0: Object
+	image1: Object
+	image2: Object
+	image3: Object
+	image4: Object
 }
 
-const {
-	id,
-	href,
-	active = false,
-	image0,
-	image1,
-	image2,
-	image3,
-	image4
-} = Astro.props as Props;
+const { id, href, active = false, image0, image1, image2, image3, image4 } = Astro.props as Props
 ---
 
 <div
 	role="tabpanel"
 	id={id}
-	class={active ? "tab-panel transition duration-300" : "absolute top-0 invisible opacity-0 tab-panel transition duration-300"}
+	class={active
+		? 'tab-panel transition duration-300'
+		: 'absolute top-0 invisible opacity-0 tab-panel transition duration-300'}
 >
-	<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-		 <!-- Image Grid -->
-		<div class="h-[20rem] md:h-[29rem] lg:h-[33rem] xl:h-[45rem] col-span-2 row-span-2 overflow-hidden">
+	<div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+		<!-- Image Grid -->
+		<div
+			class="col-span-2 row-span-2 h-[20rem] overflow-hidden md:h-[29rem] lg:h-[33rem] xl:h-[45rem]"
+		>
 			<!--img src={image0} alt="photo sample" class="object-cover w-full h-full"-->
-			<Image src={image0} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			<Image src={image0} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 		</div>
-		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
+		<div class="h-[14rem] overflow-hidden lg:h-[16rem] xl:h-[22rem]">
 			<!--img src={image1} alt="photo sample" class="object-cover w-full h-full"-->
-			<Image src={image1} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			<Image src={image1} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 		</div>
-		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
+		<div class="h-[14rem] overflow-hidden lg:h-[16rem] xl:h-[22rem]">
 			<!--img src={image2} alt="photo sample" class="object-cover w-full h-full"-->
-			<Image src={image2} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			<Image src={image2} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 		</div>
-		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
+		<div class="h-[14rem] overflow-hidden lg:h-[16rem] xl:h-[22rem]">
 			<!--img src={image3} alt="photo sample" class="object-cover w-full h-full"-->
-			<Image src={image3} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			<Image src={image3} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 		</div>
-		<div class="h-[14rem] lg:h-[16rem] xl:h-[22rem] overflow-hidden">
+		<div class="h-[14rem] overflow-hidden lg:h-[16rem] xl:h-[22rem]">
 			<!--img src={image4} alt="photo sample" class="object-cover w-full h-full"-->
-			<Image src={image4} alt="photo sample" format="avif" class="object-cover w-full h-full" />
+			<Image src={image4} alt="photo sample" format="avif" class="h-full w-full object-cover" />
 		</div>
 	</div>
-	<div class="flex justify-center items-center my-5">
-		<a href={`./${href}`} class="btn" aria-label="Open page with details about this photoshoot format">
+	<div class="my-5 flex items-center justify-center">
+		<a
+			href={`./${href}`}
+			class="btn"
+			aria-label="Open page with details about this photoshoot format"
+		>
 			TAKE A LOOK MORE
-		  </a>
-		  
+		</a>
 	</div>
 </div>
-

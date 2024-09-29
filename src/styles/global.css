@@ -3,9 +3,11 @@
     --font-sans: "Montserrat", "Arial", sans-serif; /* Custom sans-serif font stack */
     --font-serif: "Bona+Nova", "Times New Roman", serif; /* Custom serif font stack */
     --brightRed: hsl(336, 29%, 76%); /* Light red for highlights, defined in HSL */
-    --darkGray: hsl(300, 100%, 2%); /* Dark gray for backgrounds, defined in HSL */
-    --navGray: hsl(263, 47%, 23%); /* Purple color for navigation bar background (changed) */
-    --veryLightGray: hsl(0, 0%, 98%); /* Very light gray for text and background elements */
+    --darkGray: hsl(300, 36%, 4%); /* Dark gray for backgrounds, defined in HSL */
+    --navPurple: hsl(263, 47%, 23%); /* Purple color for navigation bar background */
+    --veryLightGray: hsl(0, 0%, 98%); /* Very light gray for text and background elements */    
+	--backgroundBlack: hsl(0, 0%, 0%); /* Defining black color for background */
+    --boxShadow: 0px 8px 15px rgba(45, 12, 43, 0.4); /* Define a reusable shadow */
 }
 
 /* General page background */
@@ -17,7 +19,6 @@ body {
 
 /* Frame and Shadow for Hero Image */
 #hero img {
-	/* Add a shadow effect to images in the hero section */
     box-shadow: 0px 8px 15px rgba(45, 12, 43, 0.4); /* Shadow effect */
 
 }
@@ -37,7 +38,7 @@ body {
 	top: 24px;  /* Position from the top of the screen */
 	right: 26px;  /* Position from the right of the screen */
 	z-index: 30;  /* Set a high stacking order to keep it on top */
-	background-color: var(--navGray);  /* Background color */
+	background-color: var(--navPurple);  /* Background color */
 	border-radius: 50%;  /* Makes the button round by applying 50% border radius */
 }
 
@@ -138,6 +139,7 @@ ul.square li:before {
 
 /* Hover and focus effects for buttons */
 .btn:hover, .btn:focus {
+	transform: scale(1.05); /* Slightly increase the size on hover */
 	box-shadow: var(--brightRed) 5px 5px;  /* Add a shadow with red color on hover or focus */
 }
 
@@ -174,4 +176,3 @@ ul.square li:before {
     overflow: hidden; /* Hides overflow content */
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4); /* Adds a subtle shadow */
 }
-

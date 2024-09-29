@@ -1,12 +1,12 @@
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate-show");
-    } /* else { // for multiple times animation
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('animate-show')
+		} /* else { // for multiple times animation
 			entry.target.classList.remove('animate-show')
 		}*/
-  });
-});
+	})
+})
 
-const hiddenElements = document.querySelectorAll(".animate-hide");
-hiddenElements.forEach((el) => observer.observe(el));
+const hiddenElements = document.querySelectorAll('.animate-hide')
+hiddenElements.forEach((el) => observer.observe(el))
