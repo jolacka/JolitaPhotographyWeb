@@ -3,7 +3,7 @@
 This readme file provides an overview of the project's structure, features, and usage instructions.
 
 *using technologies: Astro framework & Tailwind, HTML, CSS, Bootstrap, and JavaScript
-[link to web-site]
+[link to web-site http://localhost:4321/jolacka/JolitaPhotographyWeb/]
 
 Welcome to JolitaPhotographyWeb, my hobby site. Multi-page website with responsive web design (mobile-first approach) for presenting my personal works.
  
@@ -55,7 +55,7 @@ To set up JolitaPhotographyWeb website locally, follow these steps:
 ## 🌐 Visit Hosted GitHub Pages Site
 
 You can find the live version of the site here:
-[JolitaPhotographyWeb] https://jolacka.github.io/Jolita-s-PHOTOGRAPHY
+[JolitaPhotographyWeb] https://jolacka.github.io/Jolita-s-PHOTOGRAPHY](http://localhost:4321/jolacka/JolitaPhotographyWeb/)
  
 ## 🌟 Features
 
