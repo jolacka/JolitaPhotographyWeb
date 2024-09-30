@@ -30,8 +30,8 @@ To set up JolitaPhotographyWeb website locally, follow these steps:
 
 1. **Clone the repository*
  
-   git clone https://github.com/jolacka/Jolita-s-PHOTOGRAPHY
-   cd Jolita-s-PHOTOGRAPHY 
+   git clone [https://github.com/jolacka/Jolita-s-PHOTOGRAPHY](https://github.com/jolacka/JolitaPhotographyWeb.git)
+   cd JolitaPhotographyWeb
    
 
 2. **Install the project dependencies:**
