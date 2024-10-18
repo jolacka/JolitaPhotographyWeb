@@ -55,16 +55,17 @@ To set up JolitaPhotographyWeb website locally, follow these steps:
 ## 🌐 Visit Hosted GitHub Pages Site
 
 You can find the live version of the site here:
-[JolitaPhotographyWeb] https://jolacka.github.io/Jolita-s-PHOTOGRAPHY](http://localhost:4321/jolacka/JolitaPhotographyWeb/)
+
+--> https://jolacka.github.io/JolitaPhotographyWeb/
  
 ## 🌟 Features
 
-- **API Integration:**
-- **Multi-Page Portfolio Website:** A clean, organized site to showcase personal photography work.
+- **API Integration: Formspree, Calendly, Instagram's**
+- **Multi-Page Portfolio Website:** A clean, organized site to showcase personal photography work/hoby.
 - **Responsive Web Design:** Mobile-first approach, ensuring a great experience on all devices.
-- **Landing Page Overview** Central hub with navigation, hero section, personal bio, portfolio gallery, client reviews, and contact information.
+- **Landing Page Overview** Central hub with navigation, hero section, personal bio, portfolio gallery, client reviews/feedbacks, and contact information.
 - **Portfolio Gallery**   Photoshoot formats are displayed in a categorized gallery for easy exploration.
-- **Client Reviews** Section showcasing reviews from satisfied clients to build trust and authenticity.
+- **Client Reviews/Feedbacks** Section showcasing reviews from satisfied clients to build trust and authenticity.
 - **Social Media Links** Accessible icons to connect visitors with my social media profiles.
 - **Contact Form Integration** Fully functional contact form utilizing Formspree for sending messages directly to your inbox.
 - **Breadcrumb Navigation** Intuitive breadcrumb navigation on each additional portfolio page for easy user flow.
@@ -139,13 +140,10 @@ All commands are run from the root of the project, from a terminal:
 ## ♻️ Reusability
 
 - **Reusable Components:** All components are made to be easily reused across the website.
-- **Modular Pages:** Each page is self-contained, making it easy to maintain and extend the project in future.
 
 ## How I Managed the Project
 
 For this project, I used GitHub to handle everything, including code, documentation, and task management. I used the following:
-
-- **Feature and Bug Fix Branches**: I created separate branches for adding new features and fixing bugs. When ready, then merged these branches to main.
 
 - **Regular Commits**: I made regular updates to the code with clear messages explaining what I changed.
 
@@ -156,11 +154,10 @@ If you have any questions, feedback, or issues, please contact me via the contac
 ## 📑 Credits
 
 - All photos taken by Jolita budriene 
-- Favorite icon created by 
-- Logo designed by Jolita Budriene
+- Logo designed by Jolita Budriene Photoshop Elements 2020
 - Contact form API from [Formspree](https://formspree.io) - Used for handling form submissions easily and securely.
-- Instagram API: [InstagramAPI](https:) - 
-- ChatGPT API
+- Instagram API: [InstagramAPI](https:) - fetch Instagram Photos
+- Calendly's API - for book appointments 
 
 ## 👀 My Development Journey
 
@@ -169,6 +166,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 Focusing on making the site as user-friendly as possible.
 
 This project has been a fantastic learning experience. From designing the user interface to implementing interactive features, I’ve had the chance to experiment with modern front-end technologies and frameworks.
+First time tuch ASTRO framwork.
 
 
 
