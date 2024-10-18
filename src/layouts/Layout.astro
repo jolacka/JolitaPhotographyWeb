@@ -8,6 +8,7 @@ interface Props {
 	title?: string
 	description?: string
 	image?: string
+	url?: string
 	data?: {}
 
 	robots?: boolean
@@ -15,10 +16,10 @@ interface Props {
 
 const {
 	title = "Jolita's Photography",
-	description = "Jolita's portfolio",
-	image,
-	data,
-	robots
+	description = "Jolita's portfolio, shows personal pictures and professional photography services. Also can teach kids photography or Lithuania language",
+	image = "/default-image.jpg", // Default image for social sharing
+	url = Astro.url.pathname,
+	robots = true
 } = Astro.props as Props
 ---
 
@@ -32,7 +33,21 @@ const {
 		<meta name="description" content={description} />
 		<title>{title}</title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<!-- SEO Meta Tags -->
+		{robots ? <meta name="robots" content="index, follow" /> : <meta name="robots" content="noindex, nofollow" />}
+		<meta name="keywords" content="Photography, Portfolio, Lithuanian teache, Jolita, Photoshoot, Kid Photography, Child Phtography, Professional Photography" />
+		<meta name="author" content="Jolita Photography" />
+
+				<!-- Open Graph Meta Tags -->
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content={title} />
+				<meta property="og:description" content={description} />
+				<meta property="og:image" content={image} />
+				<meta property="og:url" content={url} />
+				<meta property="og:site_name" content="Jolita's Photography" />
+
+		
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Bona+Nova&family=Montserrat&family=Permanent+Marker&display=swap"
