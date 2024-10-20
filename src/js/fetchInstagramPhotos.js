@@ -1,7 +1,7 @@
 let currentSlide = 0;
 
 async function fetchInstagramPhotos() {
-    const accessToken = 'IGQWRQeTkzU1hYaGJkOFZArN3kyUHJUNm56RHowRGxrdUhzZAkg4OUlNT2hjdEVWQVZAmaXFpSGRzNG1VU3NZAZAUJpUEhBSkZAwalkyT2V4NHF2M052UDJsSWFmcGk1Mm54VF93SDhpb3JkWWxHbldmdlVkeTBtdWJzM2cZD'; // access token
+    const accessToken = import.meta.env.INSTAGRAM_API_KEY; // access token
     const apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=${accessToken}`;
 
     try {
