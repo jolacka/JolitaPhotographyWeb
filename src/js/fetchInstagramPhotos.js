@@ -1,7 +1,7 @@
 let currentSlide = 0;
 
 async function fetchInstagramPhotos() {
-    const accessToken = 'IGQWRQeTkzU1hYaGJkOFZArN3kyUHJUNm56RHowRGxrdUhzZAkg4OUlNT2hjdEVWQVZAmaXFpSGRzNG1VU3NZAZAUJpUEhBSkZAwalkyT2V4NHF2M052UDJsSWFmcGk1Mm54VF93SDhpb3JkWWxHbldmdlVkeTBtdWJzM2cZD'; // access token
+    const accessToken = process.env.INSTAGRAM_API_KEY; // Access token from environment variable
     const apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=${accessToken}`;
 
     try {
@@ -26,13 +26,13 @@ function displayPhotos(photos) {
         const imgElement = document.createElement('img');
         imgElement.src = photo.media_url;
         imgElement.alt = photo.caption || 'Instagram photo';
-        imgElement.classList.add('object-cover', 'w-1/3', 'h-[18rem]', 'px-1');
+        imgElement.classList.add('object-cover', 'w-1/4', 'h-[24rem]', 'px-1');
 
         const link = document.createElement('a');
         link.href = photo.permalink;
         link.target = '_blank';
         link.classList.add('flex-shrink-0');
-        link.style.width = '33.3333%'; // Each image takes up 1/3 of the carousel width
+        link.style.width = '25%'; // Each image takes up 1/4 of the carousel width
         link.appendChild(imgElement);
 
         gallery.appendChild(link);
@@ -43,11 +43,11 @@ function displayPhotos(photos) {
 
 function initCarousel() {
     const gallery = document.getElementById('instagram-gallery');
-    const totalSlides = Math.ceil(gallery.children.length / 3); // Grouping images by 3
-    let slideWidth = gallery.children[0].offsetWidth * 3; // Total width for 3 images
+    const totalSlides = Math.ceil(gallery.children.length / 4); // Grouping images by 4
+    let slideWidth = gallery.children[0].offsetWidth * 4; // Total width for 4 images
 
     window.addEventListener('resize', () => {
-        slideWidth = gallery.children[0].offsetWidth * 3;
+        slideWidth = gallery.children[0].offsetWidth * 4;
         gallery.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
     });
 

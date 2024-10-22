@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        brightRed: "var(--brightRed)",
+        brightPink: "var(--brightPink)",
         darkGray: "var(--darkGray)",
         veryLightGray: "var(--veryLightGray)",
         navGray: "var(--navPurple)",

@@ -102,6 +102,7 @@ Inside of my project, you'll see the following folders and files:
 │   │   └── contactData.js
 │   ├── js/
 │   │   ├── animation.js
+│   │   ├── fetchInstagramPhotos.js  # Frontend fetch logic
 │   │   ├── nav.js
 │   │   ├── reviews.js
 │   │   └── tabs.js

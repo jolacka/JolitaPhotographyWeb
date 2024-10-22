@@ -2,89 +2,106 @@
 import { Image } from 'astro:assets'
 import jolitaLogo from '../assets/jolita_logo.png'
 import contactData from '../data/contactData'
+import { Icon } from 'astro-icon' // Astro component for rendering icons from various icon packs;
 const currentYear = new Date().getFullYear()
 ---
 
-<div
-	class="container mx-auto mb-10 mt-20 flex flex-col items-start justify-between gap-4 px-6 text-sm md:flex-row"
->
-	<div class="flex flex-row gap-4 sm:gap-12 md:gap-20 lg:gap-32">
-		<div class="flex flex-col gap-y-3">
-			<h6 class="text-base font-semibold">JOLITA BUDRIENE</h6>
-			<ul class="flex flex-col gap-y-2">
-				<li>{currentYear}&copy; All rights reserved</li>
-				<li>
-					Thank you <Image
-						src={jolitaLogo}
-						alt="Jolita Logo"
-						width={60}
-						height={60}
-						class="ml-2 inline-block"
-					/>
-				</li>
-			</ul>
-		</div>
-		<div class="flex flex-col gap-y-3">
-			<ul class="flex flex-col gap-y-2">
-				<li>
-					<a href="/JolitaPhotographyWeb/#about" aria-label="Read more about photograph">ABOUT ME</a
-					>
-				</li>
-				<li>
-					<a
-						href="/JolitaPhotographyWeb/#formats-photoshoots"
-						aria-label="Know more about different formats of photoshoots">GALLERY</a
-					>
-				</li>
-				<li>
-					<a href="/JolitaPhotographyWeb/#reviews" aria-label="See reviews from clients">FEEDBACK</a
-					>
-				</li>
-				<li>
-					<a href="/JolitaPhotographyWeb/#contacts" aria-label="How to contact with photograph"
-						>CONTACTS</a
-					>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class="flex flex-row gap-10 md:gap-10 lg:gap-32">
-		<div class="flex flex-col gap-y-3">
-			<ul class="flex flex-col gap-y-2">
-				<li>
-					<a href=`${contactData.instagram}` target="_blank" aria-label="Open my page Instagram"
-						>INSTAGRAM</a
-					>
-				</li>
-				<li>
-					<a href=`${contactData.facebook}` target="_blank" aria-label="Open my page Facebook"
-						>FACEBOOK</a
-					>
-				</li>
-				<li>
-					<a href=`${contactData.linkedin}` target="_blank" aria-label="Open my page Facebook"
-						>LINKEDIN</a
-					>
-				</li>
-				<li>
-					<a href=`${contactData.whatsapp}` target="_blank" aria-label="Contact me in Whatsapp"
-						>WHATSAPP</a
-					>
-				</li>
-			</ul>
-		</div>
+<div class="container mx-auto my-10 flex flex-col items-center justify-between text-sm px-6">
+  <!-- Horizontal Line with Social Icons -->
+  <div class="flex items-center justify-center w-full relative my-6">
+    <!-- Left Border Line -->
+    <div class="flex-grow border-t border-gray-500"></div>
+    
+    <!-- Social Media Icons in the Center -->
+    <div class="flex gap-x-6 justify-center px-4">
+      <!-- Facebook Icon -->
+	  <a
+	  href=`${contactData.facebook}`
+	  aria-label="Contact me on Facebook"
+	  target="_blank"
+	  class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightPink"
+  	>
+	  <Icon name="ri:facebook-fill" width="36px" class="text-black" />
+  	</a>
+      
+      <!-- Instagram Icon -->
+      <a
+        href={`${contactData.instagram}`}
+        aria-label="Contact me on Instagram"
+        target="_blank"
+        class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightPink"
+      >
+        <Icon name="ri:instagram-line" width="32px" class="text-black" />  
+      </a>
+      
+      <!-- LinkedIn -->
+      <a
+        href={`${contactData.linkedin}`}
+        aria-label="Contact me on LinkedIn"
+        target="_blank"
+        class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightPink"
+      >
+        <Icon name="ri:linkedin-fill" width="32px" class="text-black" /> 
+      
+      <!-- Phone -->
+      <a
+        href={`tel:${contactData.phoneValue}`}
+        aria-label="Call me"
+        class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightPink"
+      >
+        <Icon name="ri:phone-fill" width="28px" class="text-black" /> 
+      </a>
+    </div>
 
-		<div class="flex flex-col gap-y-3">
-			<ul class="flex flex-col gap-y-2">
-				<li>
-					<a href=`tel:${contactData.phoneValue}` aria-label="Call me">{contactData.phoneText}</a>
-				</li>
-				<li><a href=`email:${contactData.email}` aria-label="Email me">{contactData.email}</a></li>
-			</ul>
-		</div>
-		<!-- Footer Logo -->
-		<a href="/JolitaPhotographyWeb/" class="flex flex-col gap-10 md:gap-10 lg:gap-32">
-			<Image src="/JolitaPhotographyWeb/Jolita_logo_W.svg" alt="Logo" width={300} height={100} />
-		</a>
-	</div>
+    <!-- Right Border Line -->
+    <div class="flex-grow border-t border-gray-500"></div>
+  </div>
+
+  <!-- Footer Logo Section -->
+  <a href="/JolitaPhotographyWeb/" class="my-6">
+    <!-- Dynamic Logo with specified dimensions -->
+    <Image src={jolitaLogo} alt="Logo" width={300} height={100} />
+  </a>
+
+  <!-- Footer Text Section -->
+  <div class="text-center">
+    <!-- Dynamic year -->
+    <p>JOLITA BUDRIENE {currentYear}© All rights reserved</p>
+    <p>Thank you</p>
+  </div>
+
+  <!-- Footer Links Section -->
+  <ul class="flex justify-center gap-6 mt-6">
+    <!-- Footer Links -->
+    <li>
+      <a href="/JolitaPhotographyWeb/#about" aria-label="About me" class="footer-link">
+        ABOUT ME
+      </a>
+    </li>
+    <li>
+      <a href="/JolitaPhotographyWeb/#formats-photoshoots" aria-label="Gallery" class="footer-link">
+        GALLERY
+      </a>
+    </li>
+    <li>
+      <a href="/JolitaPhotographyWeb/#reviews" aria-label="Feedback" class="footer-link">
+        FEEDBACK
+      </a>
+    </li>
+    <li>
+      <a href="/JolitaPhotographyWeb/#contacts" aria-label="Contacts" class="footer-link">
+        CONTACTS
+      </a>
+    </li>
+    <li>
+      <a href="/JolitaPhotographyWeb/#book-meeting" aria-label="Book a Booking" class="footer-link">
+        BOOK A BOOKING
+      </a>
+    </li>
+  </ul>
 </div>
+
+<!-- Link to custom navigation JavaScript -->
+<script>
+  import '../js/nav.js'
+</script>

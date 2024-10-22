@@ -5,6 +5,6 @@ const contactData = {
 	facebook: 'https://www.facebook.com/jolita.paskeviciute',
 	instagram: 'https://www.instagram.com/jolitabudriene',
 	linkedin: 'https://www.linkedin.com/in/jolita-budriene-3165a8194/',
-	whatsapp: '#'
+	whatsapp: '+353857726662'
 }
 export default contactData

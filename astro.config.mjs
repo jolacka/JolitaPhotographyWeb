@@ -1,5 +1,9 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import dotenv from 'dotenv';
+
+// Load environment variables from the .env file
+dotenv.config();
 
 // https://astro.build/config
 export default defineConfig({
@@ -7,7 +11,10 @@ export default defineConfig({
   site: "https://jolacka.github.io/Jolita-s-PHOTOGRAPHY/",
   base: "/JolitaPhotographyWeb/", // GitHub Pages repository name
   vite: {
-    // Explicitly replace deprecated 'as: "raw"' usage if found
+    define: {
+      // Pass the environment variable to front-end code
+      'process.env.INSTAGRAM_API_KEY': JSON.stringify(process.env.INSTAGRAM_API_KEY),
+    },
     build: {
       rollupOptions: {
         output: {

@@ -12,19 +12,19 @@ tabs.forEach((tab) => {
 
 		// Loop through all tabs to reset their styling (remove active state).
 		tabs.forEach((t) => {
-			t.classList.remove('border-brightRed')
+			t.classList.remove('border-brightPink')
 			// Add the "border-veryLightGray" class to make the inactive tabs have a light gray border.
 			t.classList.add('border-veryLightGray')
-			// Remove the "text-brightRed" class, changing the text color back to its default for inactive tabs.
-			t.classList.remove('text-brightRed')
+			// Remove the "text-brightPink" class, changing the text color back to its default for inactive tabs.
+			t.classList.remove('text-brightPink')
 		})
 		// Add classes to the clicked tab to highlight it as active.
 		// Remove the light gray border from the active tab.
 		tab.classList.remove('border-veryLightGray')
-		// Add the bright red border to show that this tab is now active.
-		tab.classList.add('border-brightRed')
-		// Change the text color to bright red for the active tab.
-		tab.classList.add('text-brightRed')
+		// Add the pink border to show that this tab is now active.
+		tab.classList.add('border-brightPink')
+		// Change the text color to pink for the active tab.
+		tab.classList.add('text-brightPink')
 
 		// Loop through all panels to display the one that matches the clicked tab's target.
 		panels.forEach((panel) => {

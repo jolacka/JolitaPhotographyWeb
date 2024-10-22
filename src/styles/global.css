@@ -2,12 +2,12 @@
 :root {
     --font-sans: "Montserrat", "Arial", sans-serif; /* Custom sans-serif font stack */
     --font-serif: "Bona+Nova", "Times New Roman", serif; /* Custom serif font stack */
-    --brightRed: hsl(336, 29%, 76%); /* Light red for highlights */
-    --darkGray: hsl(300, 15%, 9%); /* Dark gray for backgrounds */
-    --navPurple: hsl(300, 21%, 28%); /* Purple color for navigation bar background */
+    --brightPink: hsl(336, 29%, 76%); /* Light pink for highlights */
+    --darkGray: hsl(300, 6%, 10%); /* Dark gray for backgrounds */
+    --navPurple: hsl(275, 27%, 19%); /* Purple color for navigation bar background */
     --veryLightGray: hsl(0, 0%, 98%); /* Very light gray for text and background elements */    
 	--backgroundBlack: hsl(0, 0%, 0%); /* Defining black color for background */
-    --boxShadow: 0px 8px 15px rgba(17, 16, 17, 0.4); /* Define a reusable shadow */
+    --boxShadow: 0px 8px 15px rgba(15, 14, 15, 0.4); /* Define a reusable shadow */
 }
 
 /* General page background */
@@ -17,15 +17,10 @@ body {
     font-family: var(--font-sans); /* Use the sans-serif font family */
 }
 
-/* Frame and Shadow for Hero Image */
-#hero img {
+/* Frame and Shadow for Hero an About Image */
+#hero img, #about img {
     box-shadow: 0px 8px 15px rgba(15, 15, 15, 0.4); /* Shadow effect */
 
-}
-
-/* Frame and Shadow for About Image */
-#about img {
-    box-shadow: 0px 8px 15px rgba(15, 15, 15, 0.4); /* Shadow effect */
 }
 
 /* Hamburger Menu */
@@ -133,6 +128,7 @@ ul.square li:before {
 .btn {
 	border: 1px solid var(--veryLightGray);  /* Add a border around the button */
 	padding: 20px;  /* Add padding inside the button*/
+	color: var(--veryLightGray);
 	vertical-align: baseline;  /* Align button content with surrounding text */
 	transition: all 300ms cubic-bezier(0, 0, 0.2, 1);  /* Smooth transition on hover */
 }
@@ -140,23 +136,23 @@ ul.square li:before {
 /* Hover and focus effects for buttons */
 .btn:hover, .btn:focus {
 	transform: scale(1.05); /* Slightly increase the size on hover */
-	box-shadow: var(--brightRed) 5px 5px;  /* Add a shadow with red color on hover or focus */
+	box-shadow: var(--brightPink) 5px 5px;  /* Add a shadow with light pink color on hover or focus */
 }
 
-/* Red button variation with full-width layout */
-.btn-red {
+/* Pink button variation with full-width layout */
+.btn-pink {
     display: flex; /* Flexbox layout to align content */
     justify-content: center; /* Centers content horizontally */
     width: 100%; /* Full width button */
-    color: var(--brightRed); /* Red text color */
-    border: 1px solid var(--brightRed); /* Red border */
+    color: var(--brightPink); /* Pink text color */
+    border: 1px solid var(--brightPink); /* Pink border */
     padding: 20px; /* Adds padding */
     vertical-align: baseline; /* Align content to baseline */
     transition: all 300ms cubic-bezier(0, 0, 0.2, 1); /* Smooth transition for hover effects */
 }
 
-/* Hover and focus effects for red button */
-.btn-red:hover, .btn-red:focus {
+/* Hover and focus effects for pink button */
+.btn-pink:hover, .btn-pink:focus {
 	box-shadow: black 5px 5px;  /* Add a shadow on hover or focus */
 }
 
@@ -177,8 +173,9 @@ ul.square li:before {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4); /* Adds a subtle shadow */
 }
 
+/* Instagram section styling */
 #instagram-gallery-section {
-    max-width: none; /* Constrain the section to a smaller width */
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -197,12 +194,12 @@ ul.square li:before {
 
 #instagram-gallery a {
     flex-shrink: 0;
-    width: 33.3333%;  /* Full width for single image on small screens */
+    width: 25%; /* 4 images per row */
 }
 
 #instagram-gallery img {
     width: 100%;
-    height: 18rem;
+    height: 24rem; /* Adjusted height for taller images */
     object-fit: cover;
     border-radius: 8px; /* Matches the border radius of the carousel */
 }
@@ -214,7 +211,7 @@ ul.square li:before {
     cursor: pointer;
     border: none;
     padding: 10px;
-	font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 #instagram-carousel.grabbing {
