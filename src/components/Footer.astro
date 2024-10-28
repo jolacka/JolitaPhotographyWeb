@@ -60,7 +60,7 @@ const currentYear = new Date().getFullYear()
   <!-- Footer Logo Section -->
   <a href="/JolitaPhotographyWeb/" class="my-6">
     <!-- Dynamic Logo with specified dimensions -->
-    <Image src={jolitaLogo} alt="Logo" width={300} height={100} />
+    <Image src={jolitaLogo} alt="Logo" width={200} height={80} />
   </a>
 
   <!-- Footer Text Section -->
@@ -71,31 +71,31 @@ const currentYear = new Date().getFullYear()
   </div>
 
   <!-- Footer Links Section -->
-  <ul class="flex justify-center gap-6 mt-6">
+  <ul class="flex flex-wrap justify-center gap-3 md:gap-6 mt-4 md:mt-6 text-xs md:text-sm">
     <!-- Footer Links -->
     <li>
-      <a href="/JolitaPhotographyWeb/#about" aria-label="About me" class="footer-link">
-        ABOUT ME
+      <a href="/JolitaPhotographyWeb/#about" aria-label="About me" class="hover:text-brightPink">
+        ABOUT_ME
       </a>
     </li>
     <li>
-      <a href="/JolitaPhotographyWeb/#formats-photoshoots" aria-label="Gallery" class="footer-link">
+      <a href="/JolitaPhotographyWeb/#formats-photoshoots" aria-label="Gallery" class="hover:text-brightPink">
         GALLERY
       </a>
     </li>
     <li>
-      <a href="/JolitaPhotographyWeb/#reviews" aria-label="Feedback" class="footer-link">
-        FEEDBACK
-      </a>
-    </li>
-    <li>
-      <a href="/JolitaPhotographyWeb/#contacts" aria-label="Contacts" class="footer-link">
+      <a href="/JolitaPhotographyWeb/#contacts" aria-label="Contacts" class="hover:text-brightPink">
         CONTACTS
       </a>
     </li>
+	<li>
+	  <a href="/JolitaPhotographyWeb/#reviews" aria-label="Reviews and  feedback" class="hover:text-brightPink">
+		FEEDBACK
+	  </a>
+	</li>
     <li>
-      <a href="/JolitaPhotographyWeb/#book-meeting" aria-label="Book a Booking" class="footer-link">
-        BOOK A BOOKING
+      <a href="/JolitaPhotographyWeb/#book-meeting" aria-label="Book a Booking" class="hover:text-brightPink">
+        BOOKING
       </a>
     </li>
   </ul>

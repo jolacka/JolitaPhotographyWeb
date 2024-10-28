@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import Layout from '../layouts/Layout.astro'
-import Portfolio from '../components/Portfolio.astro'
+import PhotoSwipe from '../components/PhotoSwipe.astro'
 
 import aboutImage from '../assets/portfolio/moments/about.jpg'
 import image1 from '../assets/portfolio/moments/1.jpg'
@@ -15,6 +15,22 @@ import image8 from '../assets/portfolio/moments/8.jpg'
 import image9 from '../assets/portfolio/moments/9.jpg'
 import image10 from '../assets/portfolio/moments/10.jpg'
 import image11 from '../assets/portfolio/moments/11.jpg'
+import image12 from '../assets/portfolio/moments/12.jpg'
+
+const portfolioImages = [
+	image1,
+	image2,
+	image3,
+	image4,
+	image5,
+	image6,
+	image7,
+	image8,
+	image9,
+	image10,
+	image11,
+	image11
+]
 ---
 
 <Layout title="Moments Portfolio" description="About moments portfolio">
@@ -29,10 +45,14 @@ import image11 from '../assets/portfolio/moments/11.jpg'
 
 	<!-- About Section -->
 	<section id="about" data-anchor="about">
-		<div class="container mx-auto mt-10 flex flex-col items-start space-y-12 px-6 md:flex-row md:items-center md:space-y-0">
+		<div
+			class="container mx-auto mt-10 flex flex-col items-start space-y-12 px-6 md:flex-row md:items-center md:space-y-0"
+		>
 			<!-- Text Content -->
 			<div class="flex flex-col space-y-6 pr-2 md:w-2/3 md:space-y-12">
-				<h2 class="animate-hide whitespace-nowrap font-serif text-4xl text-brightPink md:pr-2 md:text-5xl lg:text-6xl">
+				<h2
+					class="animate-hide whitespace-nowrap font-serif text-4xl text-brightPink md:pr-2 md:text-5xl lg:text-6xl"
+				>
 					Moments Portfolio
 				</h2>
 				<div class="flex flex-col space-y-6">
@@ -40,7 +60,7 @@ import image11 from '../assets/portfolio/moments/11.jpg'
 					<p>
 						I truly believe in having a lasting relationship with you and giving the best experience
 						enjoyable for you and your family. I am here not just for the pictures, but to tell your
-						unique story as it unfolds, creating something beautiful to return to in the future - 
+						unique story as it unfolds, creating something beautiful to return to in the future -
 						capturing moments, memories, and feelings.
 					</p>
 				</div>
@@ -60,28 +80,17 @@ import image11 from '../assets/portfolio/moments/11.jpg'
 	<!-- Portfolio Section -->
 	<section id="portfolio" data-anchor="portfolio">
 		<div class="container mx-auto mt-20 flex flex-col space-y-6 px-6 md:space-y-12">
-			<h2 class="animate-hide flex flex-col whitespace-nowrap pr-2 font-serif text-4xl text-brightPink md:text-5xl lg:text-6xl">
+			<h2
+				class="animate-hide flex flex-col whitespace-nowrap pr-2 font-serif text-4xl text-brightPink md:text-5xl lg:text-6xl"
+			>
 				Portfolio
 			</h2>
-			<div class="mt-6">
-				<Portfolio
-					image1={image1}
-					image2={image2}
-					image3={image3}
-					image4={image4}
-					image5={image5}
-					image6={image6}
-					image7={image7}
-					image8={image8}
-					image9={image9}
-					image10={image10}
-					image11={image11}
-				/>
-			</div>
+			<!-- Photo Swipe section -->
+			<PhotoSwipe images={portfolioImages} galleryId="moments-portfolio" />
 		</div>
 	</section>
 </Layout>
 
 <script>
-	import '../js/animation.js';
+	import '../js/animation.js'
 </script>

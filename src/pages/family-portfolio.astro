@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import Layout from '../layouts/Layout.astro'
-import Portfolio from '../components/Portfolio.astro'
+import PhotoSwipe from '../components/PhotoSwipe.astro'
 
 import aboutImage from '../assets/portfolio/family/about.jpg'
 import image1 from '../assets/portfolio/family/1.jpg'
@@ -15,6 +15,22 @@ import image8 from '../assets/portfolio/family/8.jpg'
 import image9 from '../assets/portfolio/family/9.jpg'
 import image10 from '../assets/portfolio/family/10.jpg'
 import image11 from '../assets/portfolio/family/11.jpg'
+import image12 from '../assets/portfolio/family/12.jpg'
+
+const portfolioImages = [
+	image1,
+	image2,
+	image3,
+	image4,
+	image5,
+	image6,
+	image7,
+	image8,
+	image9,
+	image10,
+	image11,
+	image11
+]
 ---
 
 <Layout title="Family" description="About family portfolio">
@@ -70,21 +86,12 @@ import image11 from '../assets/portfolio/family/11.jpg'
 			>
 				Portfolio
 			</h2>
-			<div class="mt-6">
-				<Portfolio
-					image1={image1}
-					image2={image2}
-					image3={image3}
-					image4={image4}
-					image5={image5}
-					image6={image6}
-					image7={image7}
-					image8={image8}
-					image9={image9}
-					image10={image10}
-					image11={image11}
-				/>
-			</div>
+			<!-- Photo Swipe section -->
+			<PhotoSwipe
+				images={portfolioImages}
+				galleryId="family-portfolio"
+				className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4"
+			/>
 		</div>
 	</section>
 </Layout>

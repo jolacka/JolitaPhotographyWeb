@@ -159,7 +159,7 @@ If you have any questions, feedback, or issues, please contact me via the contac
 - Contact form API from [Formspree](https://formspree.io) - Used for handling form submissions easily and securely.
 - Instagram API: [InstagramAPI](https:) - fetch Instagram Photos
 - Calendly's API - for book appointments 
-
+- Credits to credits: https://dev.to/petrovicz/astro-photoswipe-549a
 ## 👀 My Development Journey
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
