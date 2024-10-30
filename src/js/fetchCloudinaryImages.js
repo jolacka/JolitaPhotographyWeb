@@ -1,4 +1,7 @@
 import { v2 as cloudinary } from 'cloudinary'
+import dotenv from 'dotenv';
+// Load environment variables from .env file
+dotenv.config();
 
 // Configure Cloudinary with credentials from .env
 cloudinary.config({
@@ -15,7 +18,8 @@ export default class CloudinaryService {
 				.sort_by('public_id', 'desc')
 				.max_results(4)
 				.execute()
-			// Include width and height for each image
+			
+			// Return image details with width and height for each image
 			return result.resources.map((resource) => ({
 				src: resource.secure_url,
 				width: resource.width,
