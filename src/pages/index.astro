@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets' // Astro component for handling image imports and optimizing image formats
-import { Icon } from 'astro-icon' // Astro component for rendering icons from various icon packs;
+import { Icon } from 'astro-icon' // Astro component for rendering icons from various icon packs
+import CloudinaryService from '../js/fetchCloudinaryImages' // Service for fetching images from Cloudinary
+import PhotoSwipeCloudinary from '../components/PhotoSwipeCloudinary.astro'
 
 import Layout from '../layouts/Layout.astro' // Layout component for page structure
 import Button from '../components/Button.astro' // Button component
@@ -32,6 +34,8 @@ import child_1Image from '../assets/formats/child/1.jpg'
 import child_2Image from '../assets/formats/child/2.jpg'
 import child_3Image from '../assets/formats/child/3.jpg'
 import child_4Image from '../assets/formats/child/4.jpg'
+
+const recentImages = await CloudinaryService.fetchImages('recentPhotos') // Fetch recent images from Cloudinary
 ---
 
 <Layout title="Jolita's PHOTOGRAPHY">
@@ -48,15 +52,18 @@ import child_4Image from '../assets/formats/child/4.jpg'
 					<h1
 						class="whitespace-nowrap pr-2 font-serif text-4xl text-brightPink md:text-5xl lg:text-6xl"
 					>
-						Hello & Welcome!
+						👋 Hello & Welcome!
 					</h1>
 				</div>
 				<div class="justify flex">
 					<p class="md:max-w-xs">
 						My name is Jolita.<br />
 						Photography is my hobby, my joy and my life.<br />
-						Photography is part of me.<br />
-						Welcome to my site. <br />
+						I love capturing moments that will be remembered forever.<br />
+						I am also a BA of Science in Computing.<br />
+						In my freetime I will sit down and build some stuff, like this website.<br />
+						This site project has been a fantastic learning experience, during UCD front-end develoment
+						course.<br />
 					</p>
 				</div>
 				<div class="flex justify-center md:justify-start">
@@ -315,6 +322,14 @@ import child_4Image from '../assets/formats/child/4.jpg'
 							<Icon name="ri:linkedin-fill" width="32px" class="text-black" />
 						</a>
 						<a
+							href=`${contactData.github}`
+							aria-label="See my github"
+							target="_blank"
+							class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightPink"
+						>
+							<Icon name="ri:github-fill" width="36px" class="text-black" />
+						</a>
+						<a
 							href=`tel:${contactData.phoneValue}`
 							aria-label="Call me"
 							class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightPink"
@@ -395,6 +410,21 @@ import child_4Image from '../assets/formats/child/4.jpg'
 				src="https://assets.calendly.com/assets/external/widget.js"
 				async></script>
 			<!-- Calendly inline widget end -->
+		</div>
+	</section>
+
+	<!--Cloudinary section -->
+	<section id="cloudinary-gallery-section" class="mt-20">
+		<div class="container mx-auto px-4 md:px-6">
+			<!-- Adjusted container padding -->
+			<h2 class="mb-8 font-serif text-4xl text-brightPink md:text-5xl lg:text-6xl">
+				RECENT PHOTOS
+			</h2>
+			<PhotoSwipeCloudinary
+				images={recentImages}
+				galleryId="cloudinary-gallery"
+				imageHeight={500}
+			/>
 		</div>
 	</section>
 

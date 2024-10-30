@@ -1,220 +1,323 @@
 /* Define custom properties (CSS variables) for fonts and colors */
 :root {
-    --font-sans: "Montserrat", "Arial", sans-serif; /* Custom sans-serif font stack */
-    --font-serif: "Bona+Nova", "Times New Roman", serif; /* Custom serif font stack */
-    --brightPink: hsl(336, 29%, 76%); /* Light pink for highlights */
-    --darkGray: hsl(300, 6%, 10%); /* Dark gray for backgrounds */
-    --navPurple: hsl(275, 27%, 19%); /* Purple color for navigation bar background */
-    --veryLightGray: hsl(0, 0%, 98%); /* Very light gray for text and background elements */    
-	--backgroundBlack: hsl(0, 0%, 0%); /* Defining black color for background */
-    --boxShadow: 0px 8px 15px rgba(15, 14, 15, 0.4); /* Define a reusable shadow */
+	--font-sans: "Montserrat", "Arial", sans-serif;
+	/* Custom sans-serif font stack */
+	--font-serif: "Bona+Nova", "Times New Roman", serif;
+	/* Custom serif font stack */
+	--brightPink: hsl(336, 29%, 76%);
+	/* Light pink for highlights */
+	--darkGray: hsl(300, 6%, 10%);
+	/* Dark gray for backgrounds */
+	--navPurple: hsl(277, 25%, 18%);
+	/* Purple color for navigation bar background */
+	--veryLightGray: hsl(0, 0%, 98%);
+	/* Very light gray for text and background elements */
+	--backgroundBlack: hsl(0, 0%, 0%);
+	/* Defining black color for background */
+	--boxShadow: 0px 8px 15px rgba(15, 14, 15, 0.4);
+	/* Define a reusable shadow */
 }
 
 /* General page background */
 body {
-    background-color: var(--backgroundBlack); /* Set body background to black */
-    color: var(--veryLightGray); /* Set text color */
-    font-family: var(--font-sans); /* Use the sans-serif font family */
+	background-color: var(--backgroundBlack);
+	/* Set body background to black */
+	color: var(--veryLightGray);
+	/* Set text color */
+	font-family: var(--font-sans);
+	/* Use the sans-serif font family */
 }
 
 /* Frame and Shadow for Hero an About Image */
 #hero img, #about img {
-    box-shadow: 0px 8px 15px rgba(15, 15, 15, 0.4); /* Shadow effect */
+	box-shadow: 0px 8px 15px rgba(15, 15, 15, 0.4);
+	/* Shadow effect */
 
+}
+
+.larger-text {
+	font-size: 1.2em;
+	/* Increase the font size to 1.2em */
 }
 
 /* Hamburger Menu */
 .hamburger {
-	cursor: pointer;  /* Change the mouse cursor to indicate it’s clickable */
-	width: 40px;  /* Set the width of the hamburger menu */
-	height: 40px;  /* Set the height of the icon */
-	transition: all 0.25s;  /* Add a smooth transition effect for any change in style */
-	position: fixed;  /* Keep the hamburger menu fixed on the screen while scrolling */
-	top: 24px;  /* Position from the top of the screen */
-	right: 26px;  /* Position from the right of the screen */
-	z-index: 30;  /* Set a high stacking order to keep it on top */
-	background-color: var(--navPurple);  /* Background color */
-	border-radius: 50%;  /* Makes the button round by applying 50% border radius */
+	cursor: pointer;
+	/* Change the mouse cursor to indicate it’s clickable */
+	width: 40px;
+	/* Set the width of the hamburger menu */
+	height: 40px;
+	/* Set the height of the icon */
+	transition: all 0.25s;
+	/* Add a smooth transition effect for any change in style */
+	position: fixed;
+	/* Keep the hamburger menu fixed on the screen while scrolling */
+	top: 24px;
+	/* Position from the top of the screen */
+	right: 26px;
+	/* Position from the right of the screen */
+	z-index: 30;
+	/* Set a high stacking order to keep it on top */
+	background-color: var(--navPurple);
+	/* Background color */
+	border-radius: 50%;
+	/* Makes the button round by applying 50% border radius */
 }
 
 /* Styles for each of the three lines in the hamburger menu */
 .hamburger-top,
 .hamburger-middle,
 .hamburger-bottom {
-	position: absolute;  /* Ensures the lines stay inside the hamburger menu container */
-	top: 12px;  /* Position from the top for the first line */
-	left: 8px;  /* Position from the left */
-	width: 24px;  /* Width of each line */
-	height: 2px;  /* Line height (thickness) */
-	background: var(--veryLightGray);  /* Line color */
-	transform: rotate(0);  /* Start with no rotation */
-	transition: all 0.5s;  /* Add smooth transition for transformations */
+	position: absolute;
+	/* Ensures the lines stay inside the hamburger menu container */
+	top: 12px;
+	/* Position from the top for the first line */
+	left: 8px;
+	/* Position from the left */
+	width: 24px;
+	/* Width of each line */
+	height: 2px;
+	/* Line height (thickness) */
+	background: var(--veryLightGray);
+	/* Line color */
+	transform: rotate(0);
+	/* Start with no rotation */
+	transition: all 0.5s;
+	/* Add smooth transition for transformations */
 }
+
 /* Adjusting positions of middle and bottom lines */
 .hamburger-middle {
-	transform: translateY(7px);  /* Move the middle line slightly down */
+	transform: translateY(7px);
+	/* Move the middle line slightly down */
 }
+
 .hamburger-bottom {
-	transform: translateY(14px);  /* Move the bottom line further down */
+	transform: translateY(14px);
+	/* Move the bottom line further down */
 }
 
 /* When the menu is open, apply these transformations */
 .open {
 	position: fixed;
-	transform: rotate(90deg);  /* Rotate the entire menu by 90 degrees */
-	transform: translateY(0px);  /* No vertical movement */
+	transform: rotate(90deg);
+	/* Rotate the entire menu by 90 degrees */
+	transform: translateY(0px);
+	/* No vertical movement */
 }
+
 .open .hamburger-top {
 	/* Rotate and move the top line into a diagonal */
 	transform: rotate(45deg) translateY(6px) translate(6px);
 }
+
 .open .hamburger-middle {
-	display: none;   /* Hide the middle line when the menu is open */
+	display: none;
+	/* Hide the middle line when the menu is open */
 }
+
 .open .hamburger-bottom {
-	transform: rotate(-45deg) translateY(6px) translate(-6px);	/* Rotate and move the bottom line into a diagonal */
+	transform: rotate(-45deg) translateY(6px) translate(-6px);
+	/* Rotate and move the bottom line into a diagonal */
 }
 
 /* Animation classes for elements that can appear and disappear */
 .animate-hide {
-	opacity: 0;  /* Initially hidden */
-	filter: blur(5px);  /* Add a blur effect when hidden */
-	transform: translateX(-100%);  /* Move it off the screen */
-	transition: all 1s;  /* Apply a 1-second transition */
+	opacity: 0;
+	/* Initially hidden */
+	filter: blur(5px);
+	/* Add a blur effect when hidden */
+	transform: translateX(-100%);
+	/* Move it off the screen */
+	transition: all 1s;
+	/* Apply a 1-second transition */
 }
+
 .animate-show {
-	opacity: 1;   /* Fully visible */
-	filter: blur(0);  /* No blur */ 
-	transform: translateX(0);  /* Move it back to its original position */
+	opacity: 1;
+	/* Fully visible */
+	filter: blur(0);
+	/* No blur */
+	transform: translateX(0);
+	/* Move it back to its original position */
 }
+
 /* Support for users who prefer reduced motion */
 @media(peferes-reduced-motion) {
 	.animate-hide {
-		transition: none;  	/* Disable transitions for users who prefer reduced motion */
+		transition: none;
+		/* Disable transitions for users who prefer reduced motion */
 	}
 }
 
 /* Staggered animation delays for feature elements */
 .feature:nth-child(1) {
-	transition-delay: 400ms;	/* Add a delay for the first feature's animation */
+	transition-delay: 400ms;
+	/* Add a delay for the first feature's animation */
 }
+
 .feature:nth-child(2) {
-	transition-delay: 600ms;	/* Add a longer delay for the second feature */
+	transition-delay: 600ms;
+	/* Add a longer delay for the second feature */
 }
+
 .feature:nth-child(3) {
-	transition-delay: 800ms;	/* Add the longest delay for the third feature */
+	transition-delay: 800ms;
+	/* Add the longest delay for the third feature */
 }
 
 /* Custom list style using square bullets */
 ul.square {
-	list-style: none;   /* Remove default browser list styling */
+	list-style: none;
+	/* Remove default browser list styling */
 }
+
 ul.square li {
-	position: relative;  /* Make the list item container relative */
-	padding-left: 20px;  /* Add padding to the left */
+	position: relative;
+	/* Make the list item container relative */
+	padding-left: 20px;
+	/* Add padding to the left */
 }
+
 ul.square li:before {
-	content: "";  /* Create a custom square bullet before the list item */
-	position: absolute;  /* Position it absolutely */
-	top: 50%;  /* Vertically center the bullet */
-	left: 0;  /* Align it to the left */
-	transform: translateY(-50%);  /* Adjust for vertical centering */
-	width: 8px;  /* Set bullet width of the square bullet */
-	height: 8px;  /* Set bullet height of the square bullet */
-	border: 1px solid var(--veryLightGray);  /* Apply a border to make it a square */
+	content: "";
+	/* Create a custom square bullet before the list item */
+	position: absolute;
+	/* Position it absolutely */
+	top: 50%;
+	/* Vertically center the bullet */
+	left: 0;
+	/* Align it to the left */
+	transform: translateY(-50%);
+	/* Adjust for vertical centering */
+	width: 8px;
+	/* Set bullet width of the square bullet */
+	height: 8px;
+	/* Set bullet height of the square bullet */
+	border: 1px solid var(--veryLightGray);
+	/* Apply a border to make it a square */
 }
 
 /* General button styles */
 .btn {
-	border: 1px solid var(--veryLightGray);  /* Add a border around the button */
-	padding: 20px;  /* Add padding inside the button*/
+	border: 1px solid var(--veryLightGray);
+	/* Add a border around the button */
+	padding: 20px;
+	/* Add padding inside the button*/
 	color: var(--veryLightGray);
-	vertical-align: baseline;  /* Align button content with surrounding text */
-	transition: all 300ms cubic-bezier(0, 0, 0.2, 1);  /* Smooth transition on hover */
+	vertical-align: baseline;
+	/* Align button content with surrounding text */
+	transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
+	/* Smooth transition on hover */
 }
 
 /* Hover and focus effects for buttons */
 .btn:hover, .btn:focus {
-	transform: scale(1.05); /* Slightly increase the size on hover */
-	box-shadow: var(--brightPink) 5px 5px;  /* Add a shadow with light pink color on hover or focus */
+	transform: scale(1.05);
+	/* Slightly increase the size on hover */
+	box-shadow: var(--brightPink) 5px 5px;
+	/* Add a shadow with light pink color on hover or focus */
 }
 
 /* Pink button variation with full-width layout */
 .btn-pink {
-    display: flex; /* Flexbox layout to align content */
-    justify-content: center; /* Centers content horizontally */
-    width: 100%; /* Full width button */
-    color: var(--brightPink); /* Pink text color */
-    border: 1px solid var(--brightPink); /* Pink border */
-    padding: 20px; /* Adds padding */
-    vertical-align: baseline; /* Align content to baseline */
-    transition: all 300ms cubic-bezier(0, 0, 0.2, 1); /* Smooth transition for hover effects */
+	display: flex;
+	/* Flexbox layout to align content */
+	justify-content: center;
+	/* Centers content horizontally */
+	width: 100%;
+	/* Full width button */
+	color: var(--brightPink);
+	/* Pink text color */
+	border: 1px solid var(--brightPink);
+	/* Pink border */
+	padding: 20px;
+	/* Adds padding */
+	vertical-align: baseline;
+	/* Align content to baseline */
+	transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
+	/* Smooth transition for hover effects */
 }
 
 /* Hover and focus effects for pink button */
 .btn-pink:hover, .btn-pink:focus {
-	box-shadow: black 5px 5px;  /* Add a shadow on hover or focus */
+	box-shadow: black 5px 5px;
+	/* Add a shadow on hover or focus */
 }
 
 /* Calendly section styling */
 #calendly-section {
-    padding: 50px; /* Adds padding to the section */
-    background-color: var(--darkGray); /* Dark gray background */
-    text-align: center; /* Centers text */
-    transition: all 0.5s ease-in-out; /* Smooth transition for changes in this section */
+	padding: 50px;
+	/* Adds padding to the section */
+	background-color: var(--darkGray);
+	/* Dark gray background */
+	text-align: center;
+	/* Centers text */
+	transition: all 0.5s ease-in-out;
+	/* Smooth transition for changes in this section */
 }
 
 /* Calendly iframe wrapper */
 .calendly-wrapper {
-    max-width: 700px; /* Limits the width of the calendly widget */
-    margin: 0 auto; /* Centers the widget */
-    border-radius: 8px; /* Rounds the corners */
-    overflow: hidden; /* Hides overflow content */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4); /* Adds a subtle shadow */
+	max-width: 700px;
+	/* Limits the width of the calendly widget */
+	margin: 0 auto;
+	/* Centers the widget */
+	border-radius: 8px;
+	/* Rounds the corners */
+	overflow: hidden;
+	/* Hides overflow content */
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+	/* Adds a subtle shadow */
 }
 
 /* Instagram section styling */
 #instagram-gallery-section {
-    max-width: 100%;
-    margin: 0 auto;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 #instagram-carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 8px; /* Adds rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 8px;
+	/* Adds rounded corners */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	/* Adds a subtle shadow */
 }
 
 #instagram-gallery {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
+	display: flex;
+	transition: transform 0.3s ease-in-out;
 }
 
 #instagram-gallery a {
-    flex-shrink: 0;
-    width: 25%; /* 4 images per row */
+	flex-shrink: 0;
+	width: 25%;
+	/* 4 images per row */
 }
 
 #instagram-gallery img {
-    width: 100%;
-    height: 24rem; /* Adjusted height for taller images */
-    object-fit: cover;
-    border-radius: 8px; /* Matches the border radius of the carousel */
+	width: 100%;
+	height: 24rem;
+	/* Adjusted height for taller images */
+	object-fit: cover;
+	border-radius: 8px;
+	/* Matches the border radius of the carousel */
 }
 
 #carousel-prev,
 #carousel-next {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    cursor: pointer;
-    border: none;
-    padding: 10px;
-    font-size: 1.5rem;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	cursor: pointer;
+	border: none;
+	padding: 10px;
+	font-size: 1.5rem;
 }
 
 #instagram-carousel.grabbing {
-    cursor: grabbing;
-    cursor: -webkit-grabbing;
+	cursor: grabbing;
+	cursor: -webkit-grabbing;
 }

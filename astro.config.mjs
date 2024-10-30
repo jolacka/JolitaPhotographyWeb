@@ -1,29 +1,32 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import dotenv from 'dotenv';
+import { defineConfig } from 'astro/config'
+import tailwind from '@astrojs/tailwind'
+import dotenv from 'dotenv'
 
 // Load environment variables from the .env file
-dotenv.config();
+dotenv.config()
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
-  site: "https://jolacka.github.io/Jolita-s-PHOTOGRAPHY/",
-  base: "/JolitaPhotographyWeb/", // GitHub Pages repository name
-  vite: {
-    define: {
-      // Pass the environment variable to front-end code
-      'process.env.INSTAGRAM_API_KEY': JSON.stringify(process.env.INSTAGRAM_API_KEY),
-    },
-    build: {
-      rollupOptions: {
-        output: {
-          globals: {
-            query: '?raw',
-            import: 'default'
-          }
-        }
-      }
-    }
-  }
-});
+	integrations: [tailwind()],
+	site: 'https://jolacka.github.io/Jolita-s-PHOTOGRAPHY/',
+	base: '/JolitaPhotographyWeb/', // GitHub Pages repository name
+	vite: {
+		define: {
+			// Pass the environment variable to front-end code
+			'process.env.CLOUDINARY_CLOUD_NAME': JSON.stringify(process.env.CLOUDINARY_CLOUD_NAME),
+			'process.env.CLOUDINARY_API_KEY': JSON.stringify(process.env.CLOUDINARY_API_KEY),
+			'process.env.CLOUDINARY_API_SECRET': JSON.stringify(process.env.CLOUDINARY_API_SECRET),
+			'process.env.INSTAGRAM_API_KEY': JSON.stringify(process.env.INSTAGRAM_API_KEY)
+		},
+		build: {
+			rollupOptions: {
+				output: {
+					globals: {
+						query: '?raw',
+						import: 'default'
+					}
+				}
+			}
+		}
+	}
+})

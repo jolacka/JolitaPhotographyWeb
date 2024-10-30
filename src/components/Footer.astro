@@ -42,6 +42,16 @@ const currentYear = new Date().getFullYear()
         class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightPink"
       >
         <Icon name="ri:linkedin-fill" width="32px" class="text-black" /> 
+     
+        <!-- gitHub -->
+        <a
+        href={`${contactData.github}`}
+        aria-label="See my github"
+        target="_blank"
+        class="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-brightPink"
+      >
+        <Icon name="ri:github-fill" width="36px" class="text-black" />
+      </a>
       
       <!-- Phone -->
       <a
@@ -66,7 +76,7 @@ const currentYear = new Date().getFullYear()
   <!-- Footer Text Section -->
   <div class="text-center">
     <!-- Dynamic year -->
-    <p>JOLITA BUDRIENE {currentYear}© All rights reserved</p>
+    <p>©{currentYear}_JOLITA BUDRIENE</p>
     <p>Thank you</p>
   </div>
 

@@ -1,10 +1,15 @@
 ---
-// PhotoSwipe.astro
-import type { ImageMetadata } from 'astro'
+// PhotoSwipeCloudinary.astro
 import { Image } from 'astro:assets'
 
+interface ImageData {
+	src: string
+	width: number
+	height: number
+}
+
 interface Props {
-	images: ImageMetadata[]
+	images: ImageData[]
 	galleryId?: string
 	imageHeight?: number
 	className?: string
@@ -12,9 +17,9 @@ interface Props {
 
 const {
 	images,
-	galleryId = 'gallery',
-	imageHeight = 350,
-	className = 'container mx-auto px-2 pb-2 grid grid-cols-2 md:grid-cols-3 gap-2'
+	galleryId = 'cloudinary-gallery',
+	imageHeight = 500, // Increased default height
+	className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4'
 } = Astro.props
 ---
 
@@ -24,26 +29,30 @@ const {
 />
 
 <div class="pswp-gallery" id={galleryId}>
-	<div class={className}>
-		{
-			images.map((image, index) => (
-				<a
-					href={image.src}
-					data-pswp-src={image.src}
-					data-pswp-width={image.width}
-					data-pswp-height={image.height}
-					class="group overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
-				>
-					<Image
-						src={image}
-						alt={`Gallery image ${index + 1}`}
-						height={imageHeight}
-						class="h-full w-full object-cover transition-all duration-300 group-hover:brightness-110"
-						loading="lazy"
-					/>
-				</a>
-			))
-		}
+	<div class="mx-auto max-w-7xl">
+		<!-- Added max-width container -->
+		<div class={className}>
+			{
+				images.map((image, index) => (
+					<a
+						href={image.src}
+						data-pswp-src={image.src}
+						data-pswp-width={image.width}
+						data-pswp-height={image.height}
+						class="group aspect-[3/4] overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+					>
+						<img
+							src={image.src}
+							alt={`Gallery image ${index + 1}`}
+							width={image.width}
+							height={imageHeight}
+							class="h-full w-full object-cover transition-all duration-300 group-hover:brightness-110"
+							loading={index < 6 ? 'eager' : 'lazy'}
+						/>
+					</a>
+				))
+			}
+		</div>
 	</div>
 </div>
 
@@ -53,7 +62,6 @@ const {
 
 	let lightbox: any = null
 
-	// Function to initialize PhotoSwipe
 	function initPhotoSwipe() {
 		const galleries = document.querySelectorAll('.pswp-gallery')
 

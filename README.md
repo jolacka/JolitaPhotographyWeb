@@ -2,37 +2,46 @@
 
 This readme file provides an overview of the project's structure, features, and usage instructions.
 
-*using technologies: Astro framework & Tailwind, HTML, CSS, Bootstrap, and JavaScript
-[link to web-site http://localhost:4321/jolacka/JolitaPhotographyWeb/]
+## Technologies Used
+
+- Astro framework
+- Tailwind CSS
+- HTML
+- CSS
+- PhotoSwipe
+- JavaScript
+[Link to website] (http://localhost:4321/jolacka/JolitaPhotographyWeb/)
 
 Welcome to JolitaPhotographyWeb, my hobby site. Multi-page website with responsive web design (mobile-first approach) for presenting my personal works.
- 
-## 🌐 Website Overview 
 
-The website is organized into multiple pages, allowing visitors to explore my photography work in detail. The Landing Page presents all the essential information about me and my portfolio, with easy navigation to other portfolio pages.
+### Main Page Features
 
-Main page Features: :
-- Navigation: Provides links to all main sections and pages.
-- Hero Section: Features a call-to-action button for easy contact.
-- About Me Section: A personal introduction to the photographer.
-- Portfolio Gallery: Divided into various photoshoot formats for easy browsing.
-- Client Reviews: Displays testimonials from satisfied clients.
-- Social Media Links: Icons on the left sidebar for easy access to social profiles.
-- Contact Form: Integrated with Formspree for handling contact submissions.
-- Footer: Contains navigation links, social media links, and contact information.
-- footer with navigation links, contacts, social-media links.
-- Breadcrumb Navigation: Available at the top of each additional page for easy user navigation.
+- **Navigation:** Provides links to all main sections and pages.
+- **Hero Section:** Features a call-to-action button for easy contact.
+- **About Me Section:** A personal introduction to the photographer.
+- **Portfolio Gallery:** Divided into various photoshoot formats for easy browsing.
+- **PhotoSwipe Lightbox:** All linked pictures are displayed using PhotoSwipe.
+- **Client Reviews:** Displays testimonials from clients.
+- **Social Media Links:** Icons on the left sidebar for easy access to social profiles.
+- **Get in Touch:** contact information
+- **Contact Form:** Integrated with Formspree for handling contact submissions.
+- **Make a Bookinking:** Calendly form to easy make bookings.
+- **Instagram gallery carusel:** Fetch recently Instagram pictures.
+- **Recent Photos:** Recent pictures from Cloudinary cloud with swipe function.
+- **Footer:** Contains navigation links, social media links, and contact information.
+- **Breadcrumb Navigation:** Available at the top of each additional page for easy user navigation.
 
 ## 🚀 Getting Started
 
-Installation
+### Installation
+
 To set up JolitaPhotographyWeb website locally, follow these steps:
 
-1. **Clone the repository*
- 
+1. **Clone the repository:**
+
+   ```bash
    git clone [https://github.com/jolacka/Jolita-s-PHOTOGRAPHY](https://github.com/jolacka/JolitaPhotographyWeb.git)
    cd JolitaPhotographyWeb
-   
 
 2. **Install the project dependencies:**
 
@@ -45,35 +54,37 @@ To set up JolitaPhotographyWeb website locally, follow these steps:
    ```bash
    npm run dev
    ```
+
    This will start the server at localhost [http://localhost:4321](http://localhost:4321/JolitaPhotographyWeb/)
 
 4. **Build the project for production:**
-   
+
    ```bash
    npm run build
+   ```
 
 ## 🌐 Visit Hosted GitHub Pages Site
 
 You can find the live version of the site here:
 
 --> https://jolacka.github.io/JolitaPhotographyWeb/
- 
+
 ## 🌟 Features
 
-- **API Integration: Formspree, Calendly, Instagram's**
-- **Multi-Page Portfolio Website:** A clean, organized site to showcase personal photography work/hoby.
+- **API Integration:** Formspree, Calendly, Cloudinary Instagram's.
+- **Multi-Page Portfolio Website:** A clean, organized site to showcase personal photography work/hobby.
 - **Responsive Web Design:** Mobile-first approach, ensuring a great experience on all devices.
-- **Landing Page Overview** Central hub with navigation, hero section, personal bio, portfolio gallery, client reviews/feedbacks, and contact information.
-- **Portfolio Gallery**   Photoshoot formats are displayed in a categorized gallery for easy exploration.
-- **Client Reviews/Feedbacks** Section showcasing reviews from satisfied clients to build trust and authenticity.
-- **Social Media Links** Accessible icons to connect visitors with my social media profiles.
-- **Contact Form Integration** Fully functional contact form utilizing Formspree for sending messages directly to your inbox.
-- **Breadcrumb Navigation** Intuitive breadcrumb navigation on each additional portfolio page for easy user flow.
-- **Hero Section with CTA** Contact me directly via the engaging hero section.
-- **Footer with Navigation and Social Links** Consistent footer containing navigation links, social media, and contact information across all pages.
-- **Custom Desients** Tailored design and imagery to reflect a unique and personal style.
-- **Astro Framework & Tailwind CSS** Built using the Astro framework combined with Tailwind CSS for modern styling and faster development.
-- **JavaScript Functionality** Enhanced user experience with interactive elements powered by JavaScript.
+- **Landing Page Overview:** Central hub with navigation, hero section, personal bio, portfolio gallery, client reviews/feedbacks, and contact information.
+- **Portfolio Gallery:** Photoshoot formats are displayed in a categorized gallery for easy exploration.
+- **Client Reviews/Feedbacks:** Section showcasing reviews from satisfied clients to build trust and authenticity.
+- **Social Media Links:** Accessible icons to connect visitors with my social media profiles.
+- **Contact Form Integration:** Fully functional contact form utilizing Formspree for sending messages directly to your inbox.
+- **Breadcrumb Navigation:** Intuitive breadcrumb navigation on each additional portfolio page for easy user flow.
+- **Hero Section with CTA:** Contact me directly via the engaging hero section.
+- **Footer with Navigation and Social Links:** Consistent footer containing navigation links, social media, and contact information across all pages.
+- **Custom Designs:** Tailored design and imagery to reflect a unique and personal style.
+- **Astro Framework & Tailwind CSS:** Built using the Astro framework combined with Tailwind CSS for modern styling and faster development.
+- **JavaScript Functionality:** Enhanced user experience with interactive elements powered by JavaScript.
 
 ## 🚀 Project Structure
 
@@ -85,18 +96,21 @@ Inside of my project, you'll see the following folders and files:
 │   ├── data/
 │   │   └── review.json
 │   ├── img/
-│   │   └── reviews/          # Contains review-related images
+│   │   └── img/reviews/          # Contains review-related images
 │   ├── favicon.svg
 │   ├── JB_logo.svg
 │   └── Jolita_logo_W.svg
 ├── src/
 │   ├── assets/
-│   │   └── formats/          # Portfolio-related formats
+│   │   ├── formats/          # Portfolio-related formats child family moments portrait
+│   │   └── portfolio
 │   ├── components/
 │   │   ├── Button.astro
 │   │   ├── Footer.astro
 │   │   ├── Icon.astro
 │   │   ├── Nav.astro
+|   |   ├── PhotoSwipe.astro
+|   |   ├── PhotoSwipeCloudinary.astro
 │   │   ├── Portfolio.astro
 │   │   └── TabPhoto.astro
 │   ├── data/
@@ -104,6 +118,7 @@ Inside of my project, you'll see the following folders and files:
 │   ├── js/
 │   │   ├── animation.js
 │   │   ├── fetchInstagramPhotos.js  # Frontend fetch logic
+│   │   ├── fetchCloudinaryImages.js
 │   │   ├── nav.js
 │   │   ├── reviews.js
 │   │   └── tabs.js
@@ -119,7 +134,15 @@ Inside of my project, you'll see the following folders and files:
 │   ├── styles/
 │   │   └── global.css
 │   └── env.d.ts              # TypeScript environment definition
+├── .env
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── astro.config.mjs
+├── package-lock.json
 ├── package.json
+├── tailwind.config.mjs
+├── tsconfig.json
 └── README.md
 
 ```
@@ -137,7 +160,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-
 ## ♻️ Reusability
 
 - **Reusable Components:** All components are made to be easily reused across the website.
@@ -154,22 +176,21 @@ If you have any questions, feedback, or issues, please contact me via the contac
 
 ## 📑 Credits
 
-- All photos taken by Jolita budriene 
+- All photos taken by Jolita Budriene
 - Logo designed by Jolita Budriene Photoshop Elements 2020
 - Contact form API from [Formspree](https://formspree.io) - Used for handling form submissions easily and securely.
 - Instagram API: [InstagramAPI](https:) - fetch Instagram Photos
-- Calendly's API - for book appointments 
-- Credits to credits: https://dev.to/petrovicz/astro-photoswipe-549a
+- Calendly's API - for book appointments
+- https://photoswipe.com/getting-started/
+
 ## 👀 My Development Journey
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+https://astro.cloudinary.dev/cldassetsloader/basic-usage
 
 Focusing on making the site as user-friendly as possible.
 
 This project has been a fantastic learning experience. From designing the user interface to implementing interactive features, I’ve had the chance to experiment with modern front-end technologies and frameworks.
-First time tuch ASTRO framwork.
-
-
-
+First time using ASTRO framwork. Cloudinary gtransformation - allow for me to drag and drop full sizes images.
 
 Thank you for visiting my page!
