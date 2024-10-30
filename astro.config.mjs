@@ -13,8 +13,8 @@ export default defineConfig({
 	vite: {
 		define: {
 			// Pass the environment variable to front-end code
-			'process.env.CLOUDINARY_CLOUD_NAME': JSON.stringify(process.env.CLOUDINARY_CLOUD_NAME),
-			'process.env.CLOUDINARY_API_KEY': JSON.stringify(process.env.CLOUDINARY_API_KEY),
+			'process.env.PUBLIC_CLOUDINARY_CLOUD_NAME': JSON.stringify(process.env.PUBLIC_CLOUDINARY_CLOUD_NAME),
+			'process.env.PUBLIC_CLOUDINARY_API_KEY': JSON.stringify(process.env.PUBLIC_CLOUDINARY_API_KEY),
 			'process.env.CLOUDINARY_API_SECRET': JSON.stringify(process.env.CLOUDINARY_API_SECRET),
 			'process.env.INSTAGRAM_API_KEY': JSON.stringify(process.env.INSTAGRAM_API_KEY)
 		},
