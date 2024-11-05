@@ -8,7 +8,7 @@
 	/* Light pink for highlights */
 	--darkGray: hsl(300, 6%, 10%);
 	/* Dark gray for backgrounds */
-	--navPurple: hsl(280, 18%, 13%);
+	--navPurple: hsl(280, 21%, 11%);
 	/* Purple color for navigation bar background */
 	--veryLightGray: hsl(0, 0%, 98%);
 	/* Very light gray for text and background elements */
@@ -213,8 +213,10 @@ ul.square li:before {
 
 /* Hover and focus effects for buttons */
 .btn:hover, .btn:focus {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px var(--brightPink); /* Simplified shadow */
+	transform: scale(1.05);
+	/* Slightly increase the size on hover */
+	box-shadow: var(--brightPink) 5px 5px;
+	/* Add a shadow with light pink color on hover or focus */
 }
 
 /* Pink button variation with full-width layout */
@@ -271,8 +273,11 @@ ul.square li:before {
 
 /* Instagram section styling */
 #instagram-gallery-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; /* Stack elements on top of each other */
 	max-width: 100%;
-	margin: 0 auto;
 	padding: 1rem;
 }
 
@@ -281,7 +286,10 @@ ul.square li:before {
 	width: 100%;
 	overflow: hidden;
 	border-radius: 8px;
+	/* Adds rounded corners */
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	/* Adds a subtle shadow */
+	max-width: 100%;
 }
 
 #instagram-gallery {
@@ -291,16 +299,18 @@ ul.square li:before {
 
 #instagram-gallery a {
 	flex-shrink: 0;
+	width: 100%;
 }
 
 #instagram-gallery img {
 	width: 100%;
-	height: auto; /* Adjusted height */
+	height: 22rem;
+	/* Adjusted height for taller images */
 	object-fit: cover;
 	border-radius: 8px;
+	/* Matches the border radius of the carousel */
 }
 
-/* Carousel controls styling */
 #carousel-prev,
 #carousel-next {
 	background-color: rgba(0, 0, 0, 0.5);
@@ -309,43 +319,30 @@ ul.square li:before {
 	border: none;
 	padding: 10px;
 	font-size: 1.5rem;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
 }
 
-/* Position controls */
-#carousel-prev {
-	left: 10px;
+#instagram-carousel.grabbing {
+	cursor: grabbing;
+	cursor: -webkit-grabbing;
 }
-#carousel-next {
-	right: 10px;
-}
-
 /* Responsive adjustments */
-@media (max-width: 640px) {
+@media (min-width: 480px) and (max-width: 640px) {
 	#instagram-gallery a {
-		width: 100%; /* One image per row */
+	  width: 50%;
+	}
+  }
+  
+  @media (min-width: 641px) and (max-width: 1024px) {
+	#instagram-gallery a {
+	  width: 33.3333%;
+	}
+  }
+  
+  @media (min-width: 1025px) {
+	#instagram-gallery a {
+	  width: 25%;
 	}
 	#instagram-gallery img {
-		height: 22rem; /* Taller height on mobile */
+	  height: 26rem;
 	}
-}
-
-@media (min-width: 641px) and (max-width: 1024px) {
-	#instagram-gallery a {
-		width: 50%; /* Two images per row */
-	}
-	#instagram-gallery img {
-		height: 24rem; /* Increased height for tablet */
-	}
-}
-
-@media (min-width: 1025px) {
-	#instagram-gallery a {
-		width: 33.3333%; /* Three images per row */
-	}
-	#instagram-gallery img {
-		height: 26rem; /* Tallest height for desktop view */
-	}
-}
+  }
