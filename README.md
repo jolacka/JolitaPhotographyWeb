@@ -63,6 +63,9 @@ To set up JolitaPhotographyWeb website locally, follow these steps:
    npm run build
    ```
 
+NOTE: 
+If you want to copy my setup: Create a .env file in the root directory and add your API key.
+
 ## 🌐 Visit Hosted GitHub Pages Site
 
 You can find the live version of the site here:
