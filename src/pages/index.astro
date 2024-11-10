@@ -62,7 +62,8 @@ const recentImages = await CloudinaryService.fetchImages('recentPhotos') // Fetc
 						I love capturing moments that will be remembered forever.<br />
 						I also hold a Bachelor of Science in Computing.<br />
 						In my free time, I enjoy building things, like this website.<br />
-						Creating this site has been a fantastic learning experience during my UCD front-end development course.<br />
+						Creating this site has been a fantastic learning experience during my UCD front-end development
+						course.<br />
 					</p>
 				</div>
 				<div class="flex justify-center md:justify-start">
@@ -96,13 +97,13 @@ const recentImages = await CloudinaryService.fetchImages('recentPhotos') // Fetc
 					<p>
 						I am an enthusiastic photographer, originally from Lithuania, but for the past 18 years,
 						I’ve been living in Ireland, which I now proudly call home. Photography has been my
-						passion, my joy, and my escape for a very long time.  It fills me with happiness.
+						passion, my joy, and my escape for a very long time. It fills me with happiness.
 					</p>
 					<p>
-						My home is in the heart of Ireland, in the town of Kildare, County Kildare. 
-						I love capturing all kinds of moments. Photography is a part of my life,
-						and I’m thrilled to share my work with you. It would be a pleasure 
-						to capture memories for you and your loved ones.
+						My home is in the heart of Ireland, in the town of Kildare, County Kildare. I love
+						capturing all kinds of moments. Photography is a part of my life, and I’m thrilled to
+						share my work with you. It would be a pleasure to capture memories for you and your
+						loved ones.
 					</p>
 					<p>
 						I am passionate about photography and continually strive to improve my craft. Capturing
@@ -257,12 +258,21 @@ const recentImages = await CloudinaryService.fetchImages('recentPhotos') // Fetc
 
 			<div class="mt-10 flex space-x-2 overflow-hidden">
 				<div class="reviews flex"></div>
+				<!-- Button for moving the slider right -->
 				<button
 					id="reviews-arrow-right"
 					aria-label="Review Arrow Right"
 					class="arrow absolute -right-3 top-[calc(50%+2rem)] w-[35px] rounded-full bg-darkGray transition-all duration-300 ease-out hover:-right-4 hover:text-brightPink focus:text-brightPink"
 				>
 					<Icon name="lucide:arrow-right" width="36px" class="" />
+				</button>
+				<!-- Button for moving the slider left -->
+				<button
+					id="reviews-arrow-left"
+					aria-label="Review Arrow Left"
+					class="arrow absolute -left-3 top-[calc(50%+2rem)] w-[35px] rounded-full bg-darkGray transition-all duration-300 ease-out hover:-left-4 hover:text-brightPink focus:text-brightPink"
+				>
+					<Icon name="lucide:arrow-left" width="36px" class="" />
 				</button>
 			</div>
 		</div>
@@ -441,7 +451,7 @@ const recentImages = await CloudinaryService.fetchImages('recentPhotos') // Fetc
 			<div
 				id="instagram-carousel"
 				style="max-width: 2000px;"
-				class="relative mx-auto overflow-hidden rounded-lg shadow-md max-w-screen-xl"
+				class="relative mx-auto max-w-screen-xl overflow-hidden rounded-lg shadow-md"
 			>
 				<!-- Instagram gallery images will be dynamically added here -->
 				<div

@@ -40,6 +40,10 @@ function moveSlider(e) {
 	slideIndex === reviews.length - 1 ? (slideIndex = 0) : slideIndex++
 	document.querySelector('.reviews').style.transform = `translate(${-100 * slideIndex}%)`
 }
+function moveSliderLeft() {
+	slideIndex === 0 ? (slideIndex = reviews.length - 1) : slideIndex--;
+	document.querySelector('.reviews').style.transform = `translate(${-100 * slideIndex}%)`;
+}
 
 async function fetchReviews() {
 	await fetch('/JolitaPhotographyWeb/data/reviews.json') // updated base path for github
@@ -60,5 +64,5 @@ async function fetchReviews() {
 
 fetchReviews()
 
-// Add event listeners to move the slider right
 document.querySelector('#reviews-arrow-right').addEventListener('click', moveSlider)
+document.querySelector('#reviews-arrow-left').addEventListener('click', moveSliderLeft);
