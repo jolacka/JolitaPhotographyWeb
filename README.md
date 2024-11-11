@@ -12,9 +12,9 @@ This README provides an overview of the project structure, features, technologie
   
 ## 🌐 Visit Hosted GitHub Pages Site
 
-You can find the live version of the site [here] https://jolacka.github.io/JolitaPhotographyWeb/
+You can find the live version of the site [JolitaPhotographyWeb](https://jolacka.github.io/JolitaPhotographyWeb/)
 
-## 🌟 Features
+## 🌟 KeyFeatures
 
 - **Navigation:** Provides links to all main sections and pages.
 - **Hero Section:** Features a call-to-action button for easy contact.
@@ -81,19 +81,29 @@ Inside of my project, you'll see the following folders and files:
 
 ```textpadaryti veliau
 /
-├── public/
+├── public/                       # Static assets
 │   ├── data/
-│   │   └── review.json
+│   │   └── review.json           # Reviews data
 │   ├── img/
 │   │   └── img/reviews/          # Contains review-related images
 │   ├── favicon.svg
 │   ├── JB_logo.svg
 │   └── Jolita_logo_W.svg
-├── src/
-│   ├── assets/
-│   │   ├── formats/          # Portfolio-related formats child family moments portrait
-│   │   └── portfolio
-│   ├── components/
+│
+├── src/                       # Source code
+│   ├── assets/                # Dynamic assets
+│   │   ├── formats/           # Portfolio categories
+│   │   │   ├── child/         # Child photography
+│   │   │   ├── family/        # Family photography
+│   │   │   ├── moments/       # Moments photography
+│   │   │   └── portrait/      # Portrait photography
+│   │   └── portfolio/         # General portfolio assets
+│   │       ├── child/        
+│   │       ├── family/        
+│   │       ├── moments/       
+│   │       └── portrait/      
+│   │
+│   ├── components/               # Reusable UI components
 │   │   ├── Button.astro
 │   │   ├── Footer.astro
 │   │   ├── Icon.astro
@@ -103,8 +113,8 @@ Inside of my project, you'll see the following folders and files:
 │   │   ├── Portfolio.astro
 │   │   └── TabPhoto.astro
 │   ├── data/
-│   │   └── contactData.js
-│   ├── js/
+│   │   └── contactData.js        # Contact information
+│   ├── js/                       # JavaScript components
 │   │   ├── animation.js
 │   │   ├── fetchInstagramPhotos.js  # Frontend fetch logic
 │   │   ├── fetchCloudinaryImages.js
@@ -117,13 +127,13 @@ Inside of my project, you'll see the following folders and files:
 │   │   ├── 404.astro
 │   │   ├── child-portfolio.astro      # Portfolio-related
 │   │   ├── family-portfolio.astro
-│   │   ├── index.astro
+│   │   ├── index.astro                # Home page
 │   │   ├── moments-portfolio.astro
 │   │   └── portrait-portfolio.astro
 │   ├── styles/
-│   │   └── global.css
+│   │   └── global.css   # Global styles
 │   └── env.d.ts              # TypeScript environment definition
-├── .env
+├── .env                      # API keys configuration
 ├── .gitignore
 ├── .prettierignore
 ├── .prettierrc
