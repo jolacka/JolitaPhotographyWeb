@@ -1,20 +1,20 @@
-# Astro JolitaPhotographyWeb
+# 📸 JolitaPhotographyWeb - Built with Astro
 
-This readme file provides an overview of the project's structure, features, and usage instructions.
+This README provides an overview of the project structure, features, technologies used, and instructions for getting started with [JolitaPhotographyWeb](https://jolacka.github.io/JolitaPhotographyWeb/). Multi-page website with responsive web design (mobile-first approach) for presenting my personal works.
 
-## Technologies Used
+## 💻 Technologies Used
 
-- Astro framework
+- Astro framework: Static site generation for minimal JavaScript and optimal performance.
 - Tailwind CSS
-- HTML
-- CSS
+- JavaScript & HTML/CSS
 - PhotoSwipe
-- JavaScript
-[Link to website] (http://localhost:4321/jolacka/JolitaPhotographyWeb/)
+- API Integrations: Calendly, Instagram, Cloudinary
+  
+## 🌐 Visit Hosted GitHub Pages Site
 
-Welcome to JolitaPhotographyWeb, my hobby site. Multi-page website with responsive web design (mobile-first approach) for presenting my personal works.
+You can find the live version of the site [here] https://jolacka.github.io/JolitaPhotographyWeb/
 
-### Main Page Features
+## 🌟 Features
 
 - **Navigation:** Provides links to all main sections and pages.
 - **Hero Section:** Features a call-to-action button for easy contact.
@@ -23,15 +23,18 @@ Welcome to JolitaPhotographyWeb, my hobby site. Multi-page website with responsi
 - **PhotoSwipe Lightbox:** All linked pictures are displayed using PhotoSwipe.
 - **Client Reviews:** Displays testimonials from clients.
 - **Social Media Links:** Icons on the left sidebar for easy access to social profiles.
-- **Get in Touch:** contact information
-- **Contact Form:** Integrated with Formspree for handling contact submissions.
+- **Get in Touch:** Contact information with social links.
+- **Contact Form:** Integrated with Formspree for handling contact submissions, sending messages directly to email.
 - **Make a Bookinking:** Calendly form to easy make bookings.
 - **Instagram gallery carusel:** Fetch recently Instagram pictures.
-- **Recent Photos:** Recent pictures from Cloudinary cloud with swipe function.
-- **Footer:** Contains navigation links, social media links, and contact information.
+- **Recent Photos:** Recent pictures from Cloudinary cloud with PhotoSwipe function.
+- **Footer with Navigation and Social Links:** Consistent footer containing navigation links, social media, and contact information across all pages.
 - **Breadcrumb Navigation:** Available at the top of each additional page for easy user navigation.
 
+
 ## 🚀 Getting Started
+
+Required: Node.js (latest LTS version recommended)
 
 ### Installation
 
@@ -40,7 +43,7 @@ To set up JolitaPhotographyWeb website locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/jolacka/Jolita-s-PHOTOGRAPHY](https://github.com/jolacka/JolitaPhotographyWeb.git)
+   git clone [JolitaPhotographyWeb](https://github.com/jolacka/JolitaPhotographyWeb.git)
    cd JolitaPhotographyWeb
 
 2. **Install the project dependencies:**
@@ -49,7 +52,22 @@ To set up JolitaPhotographyWeb website locally, follow these steps:
    npm install
    ```
 
-3. **Start the development server:**
+3. **Build the project for production:**
+
+   ```bash
+   npm run build
+   ```
+   
+4. **Environment Variables:** 
+NOTE: If you want to copy my setup: Create a .env file in the root directory and add your API key.
+   
+   ```bash
+   FORMSPREE_KEY=your_formspree_key
+   INSTAGRAM_API_KEY=your_instagram_key
+   CLOUDINARY_API_KEY=your_cloudinary_key
+   ```
+
+5. **Start the development server:**
 
    ```bash
    npm run dev
@@ -57,39 +75,7 @@ To set up JolitaPhotographyWeb website locally, follow these steps:
 
    This will start the server at localhost [http://localhost:4321](http://localhost:4321/JolitaPhotographyWeb/)
 
-4. **Build the project for production:**
-
-   ```bash
-   npm run build
-   ```
-
-NOTE: 
-If you want to copy my setup: Create a .env file in the root directory and add your API key.
-
-## 🌐 Visit Hosted GitHub Pages Site
-
-You can find the live version of the site here:
-
---> https://jolacka.github.io/JolitaPhotographyWeb/
-
-## 🌟 Features
-
-- **API Integration:** Formspree, Calendly, Cloudinary Instagram's.
-- **Multi-Page Portfolio Website:** A clean, organized site to showcase personal photography work/hobby.
-- **Responsive Web Design:** Mobile-first approach, ensuring a great experience on all devices.
-- **Landing Page Overview:** Central hub with navigation, hero section, personal bio, portfolio gallery, client reviews/feedbacks, and contact information.
-- **Portfolio Gallery:** Photoshoot formats are displayed in a categorized gallery for easy exploration.
-- **Client Reviews/Feedbacks:** Section showcasing reviews from satisfied clients to build trust and authenticity.
-- **Social Media Links:** Accessible icons to connect visitors with my social media profiles.
-- **Contact Form Integration:** Fully functional contact form utilizing Formspree for sending messages directly to your inbox.
-- **Breadcrumb Navigation:** Intuitive breadcrumb navigation on each additional portfolio page for easy user flow.
-- **Hero Section with CTA:** Contact me directly via the engaging hero section.
-- **Footer with Navigation and Social Links:** Consistent footer containing navigation links, social media, and contact information across all pages.
-- **Custom Designs:** Tailored design and imagery to reflect a unique and personal style.
-- **Astro Framework & Tailwind CSS:** Built using the Astro framework combined with Tailwind CSS for modern styling and faster development.
-- **JavaScript Functionality:** Enhanced user experience with interactive elements powered by JavaScript.
-
-## 🚀 Project Structure
+## 📁 Project Structure
 
 Inside of my project, you'll see the following folders and files:
 
@@ -149,8 +135,7 @@ Inside of my project, you'll see the following folders and files:
 └── README.md
 
 ```
-
-## 🧞 Commands
+## 🛠️ Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -163,37 +148,43 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## 🔌 API Integrations
+
+- **Formspree** - contact form submissions.
+- **Calendly** - appointment scheduling.
+- **Cloudinary** - photos from the Cloudinary API, fast performance and optimized image quality.
+- **Instagram API** - fetches and displays recent Instagram photos in a carousel format.
+
 ## ♻️ Reusability
 
 - **Reusable Components:** All components are made to be easily reused across the website.
 
-## How I Managed the Project
+## 🔍 SEO & Accessibility
+
+- **SEO Optimization** - use of meta tags and structured data.
+- **Accessibility** - follows best practices for accessibility, including ARIA labels and semantic HTML.
+
+## 📬 Contact
+
+If you have any questions, feedback, or issues, please contact me via the contact form on the Contact page.
+
+## 📝 How I Managed the Project
 
 For this project, I used GitHub to handle everything, including code, documentation, and task management. I used the following:
 
 - **Regular Commits**: I made regular updates to the code with clear messages explaining what I changed.
+  
+## 👀 My Development Journey
 
-## 📞 Contact
+This project has been a fantastic learning experience and challenge, allowing me to work with modern web technologies like Astro, Tailwind CSS, and cloud-based solutions. It was also my first time using Astro, and I learned a lot about optimizing images and integrating third-party APIs to ensure a responsive and performant site.
 
-If you have any questions, feedback, or issues, please contact me via the contact form on the Contact page.
+Focusing on making the site as user-friendly as possible.
 
-## 📑 Credits
+## 📌 Credits
 
 - All photos taken by Jolita Budriene
 - Logo designed by Jolita Budriene Photoshop Elements 2020
 - Contact form API from [Formspree](https://formspree.io) - Used for handling form submissions easily and securely.
-- Instagram API: [InstagramAPI](https:) - fetch Instagram Photos
-- Calendly's API - for book appointments
 - https://photoswipe.com/getting-started/
 
-## 👀 My Development Journey
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-https://astro.cloudinary.dev/cldassetsloader/basic-usage
-
-Focusing on making the site as user-friendly as possible.
-
-This project has been a fantastic learning experience. From designing the user interface to implementing interactive features, I’ve had the chance to experiment with modern front-end technologies and frameworks.
-First time using ASTRO framwork. Cloudinary gtransformation - allow for me to drag and drop full sizes images.
-
-Thank you for visiting my page!
+Thank you for visiting [my page](https://jolacka.github.io/JolitaPhotographyWeb/) !
