@@ -8,7 +8,7 @@ This README provides an overview of the project structure, features, technologie
 - Tailwind CSS
 - JavaScript & HTML/CSS
 - PhotoSwipe
-- API Integrations: Calendly, Instagram, Cloudinary
+- API Integrations: Formspree, Calendly, Instagram, Cloudinary
   
 ## 🌐 Visit Hosted GitHub Pages Site
 
@@ -22,12 +22,12 @@ You can find the live version of the site [JolitaPhotographyWeb](https://jolacka
 - **Portfolio Gallery:** Divided into various photoshoot formats for easy browsing.
 - **PhotoSwipe Lightbox:** All linked pictures are displayed using PhotoSwipe.
 - **Client Reviews:** Displays testimonials from clients.
-- **Social Media Links:** Icons on the left sidebar for easy access to social profiles.
+- **Social Media Links:** Icons for quick access to social profiles.
 - **Get in Touch:** Contact information with social links.
-- **Contact Form:** Integrated with Formspree for handling contact submissions, sending messages directly to email.
-- **Make a Bookinking:** Calendly form to easy make bookings.
-- **Instagram gallery carusel:** Fetch recently Instagram pictures.
-- **Recent Photos:** Recent pictures from Cloudinary cloud with PhotoSwipe function.
+- **Contact Form:** Integrated with Formspree for email submissions.
+- **Make a Bookinking:** Calendly integration for scheduling appointments.
+- **Instagram gallery carusel:** Fetch displays recently Instagram pictures.
+- **Recent Photos:** Fetches images from Cloudinary with PhotoSwipe support.
 - **Footer with Navigation and Social Links:** Consistent footer containing navigation links, social media, and contact information across all pages.
 - **Breadcrumb Navigation:** Available at the top of each additional page for easy user navigation.
 
@@ -79,70 +79,31 @@ NOTE: If you want to copy my setup: Create a .env file in the root directory and
 
 Inside of my project, you'll see the following folders and files:
 
-```textpadaryti veliau
 /
 ├── public/                       # Static assets
-│   ├── data/
-│   │   └── review.json           # Reviews data
-│   ├── img/
-│   │   └── img/reviews/          # Contains review-related images
-│   ├── favicon.svg
-│   ├── JB_logo.svg
-│   └── Jolita_logo_W.svg
+│   ├── data/                     # Reviews and other public data
+│   ├── img/                      # Static images
+│   ├── favicon.svg               # Site favicon
+│   ├── JB_logo.svg               # JB logo
+│   └── Jolita_logo_W.svg         # Logo
 │
 ├── src/                       # Source code
 │   ├── assets/                # Dynamic assets
 │   │   ├── formats/           # Portfolio categories
-│   │   │   ├── child/         # Child photography
-│   │   │   ├── family/        # Family photography
-│   │   │   ├── moments/       # Moments photography
-│   │   │   └── portrait/      # Portrait photography
-│   │   └── portfolio/         # General portfolio assets
-│   │       ├── child/        
-│   │       ├── family/        
-│   │       ├── moments/       
-│   │       └── portrait/      
+│   │   └── portfolio/         # General portfolio assets     
 │   │
-│   ├── components/               # Reusable UI components
-│   │   ├── Button.astro
-│   │   ├── Footer.astro
-│   │   ├── Icon.astro
-│   │   ├── Nav.astro
-|   |   ├── PhotoSwipe.astro
-|   |   ├── PhotoSwipeCloudinary.astro
-│   │   ├── Portfolio.astro
-│   │   └── TabPhoto.astro
-│   ├── data/
-│   │   └── contactData.js        # Contact information
-│   ├── js/                       # JavaScript components
-│   │   ├── animation.js
-│   │   ├── fetchInstagramPhotos.js  # Frontend fetch logic
-│   │   ├── fetchCloudinaryImages.js
-│   │   ├── nav.js
-│   │   ├── reviews.js
-│   │   └── tabs.js
-│   ├── layouts/
-│   │   └── Layout.astro
-│   ├── pages/
-│   │   ├── 404.astro
-│   │   ├── child-portfolio.astro      # Portfolio-related
-│   │   ├── family-portfolio.astro
-│   │   ├── index.astro                # Home page
-│   │   ├── moments-portfolio.astro
-│   │   └── portrait-portfolio.astro
-│   ├── styles/
-│   │   └── global.css   # Global styles
+│   ├── components/           # Reusable UI components (Astro)
+│   ├── data/                 # Data files, e.g., contact information
+│   ├── js/                   # JavaScript components (animations, fetches, etc.)
+│   ├── layouts/              # Layouts for pages
+│   ├── pages/                # Website pages (Gallery)
+│   ├── styles/               # Global styles
 │   └── env.d.ts              # TypeScript environment definition
 ├── .env                      # API keys configuration
-├── .gitignore
-├── .prettierignore
-├── .prettierrc
-├── astro.config.mjs
-├── package-lock.json
-├── package.json
-├── tailwind.config.mjs
-├── tsconfig.json
-└── README.md
+├── astro.config.mjs          # Astro configuration
+├── package.json              # Dependencies and scripts
+├── tailwind.config.mjs       # Tailwind CSS configuration
+└── README.md                 # Project documentation
 
 ```
 ## 🛠️ Commands
