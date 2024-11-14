@@ -79,6 +79,7 @@ NOTE: If you want to copy my setup: Create a .env file in the root directory and
 
 Inside of my project, you'll see the following folders and files:
 
+```text
 /
 ├── public/                       # Static assets
 │   ├── data/                     # Reviews and other public data
